@@ -7,9 +7,11 @@
   <title>Sina — Portfolio</title>
   <meta name="description" content="Sina — Master of Computer Science at Iran University of Science and Technology." />
 
-  <!-- Optional: Material Symbols (Google icons) -->
+  <!-- Typography: Inter (clean) + Roboto for fallback -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&display=swap"
     rel="stylesheet"
@@ -23,7 +25,7 @@
 
   <header class="topbar">
     <div class="container topbar__inner">
-      <div class="brand">
+      <div class="brand" aria-label="Brand">
         <div class="brand__mark" aria-hidden="true">S</div>
         <div class="brand__text">
           <div class="brand__name">Sina</div>
@@ -39,9 +41,49 @@
       </nav>
 
       <div class="topbar__actions">
-        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle theme">
-          <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+        <button class="icon-btn icon-btn--ghost" type="button" id="menuBtn" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
+          <span class="material-symbols-rounded" aria-hidden="true">menu</span>
         </button>
+
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle theme">
+          <span class="material-symbols-rounded" id="themeIcon" aria-hidden="true">dark_mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="scrim" id="scrim" hidden></div>
+    <div class="drawer" id="mobileNav" hidden role="dialog" aria-modal="true" aria-label="Mobile menu">
+      <div class="drawer__head">
+        <div class="drawer__title">Navigation</div>
+        <button class="icon-btn" type="button" id="closeMenu" aria-label="Close menu">
+          <span class="material-symbols-rounded" aria-hidden="true">close</span>
+        </button>
+      </div>
+
+      <div class="drawer__content">
+        <a class="drawer__link" href="#about">
+          <span class="material-symbols-rounded" aria-hidden="true">person</span>
+          <span>About</span>
+        </a>
+        <a class="drawer__link" href="#education">
+          <span class="material-symbols-rounded" aria-hidden="true">school</span>
+          <span>Education</span>
+        </a>
+        <a class="drawer__link" href="#projects">
+          <span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span>
+          <span>Projects</span>
+        </a>
+        <a class="drawer__link" href="#contact">
+          <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
+          <span>Contact</span>
+        </a>
+
+        <div class="drawer__divider" role="separator" aria-hidden="true"></div>
+
+        <div class="drawer__hint">
+          Tip: Keep projects short and link to GitHub + demo.
+        </div>
       </div>
     </div>
   </header>
@@ -114,7 +156,6 @@
             </div>
 
             <div class="profile__links">
-              <!-- Replace # with your real links -->
               <a class="icon-link" href="#" aria-label="GitHub">
                 <span class="material-symbols-rounded" aria-hidden="true">code</span>
               </a>
@@ -158,7 +199,6 @@
               <h3>What I do</h3>
             </div>
             <p class="card__text">
-              <!-- Replace this text -->
               I build reliable software and explore research directions in computer science.
               I care about clean architecture, performance, and delightful UX.
             </p>
@@ -219,6 +259,7 @@
       </div>
     </section>
 
+    <!-- ✅ Education: 3 slots -->
     <section class="section" id="education">
       <div class="container">
         <div class="section__head">
@@ -227,6 +268,7 @@
         </div>
 
         <div class="timeline">
+          <!-- 1 -->
           <article class="card timeline__item">
             <div class="timeline__dot" aria-hidden="true"></div>
             <div class="timeline__content">
@@ -237,10 +279,37 @@
               <div class="timeline__meta">
                 Iran University of Science and Technology • <span class="muted">Tehran, Iran</span>
               </div>
-              <p class="timeline__text">
-                <!-- Replace this line -->
-                Thesis/Focus: — • Relevant coursework: —
-              </p>
+              <p class="timeline__text">Thesis/Focus: — • Relevant coursework: —</p>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="card timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__top">
+                <h3 class="timeline__title">Bachelor of —</h3>
+                <span class="badge badge--tonal">—</span>
+              </div>
+              <div class="timeline__meta">
+                University Name #2 • <span class="muted">City, Country</span>
+              </div>
+              <p class="timeline__text">Key courses: — • GPA/Rank (optional): —</p>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="card timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__top">
+                <h3 class="timeline__title">Diploma / Associate / —</h3>
+                <span class="badge badge--tonal">—</span>
+              </div>
+              <div class="timeline__meta">
+                University Name #3 • <span class="muted">City, Country</span>
+              </div>
+              <p class="timeline__text">Highlights: — • Activities: —</p>
             </div>
           </article>
         </div>
@@ -255,15 +324,12 @@
         </div>
 
         <div class="grid grid--3">
-          <!-- Project Card -->
           <article class="card project">
             <div class="project__top">
               <h3 class="project__title">Project Name</h3>
               <span class="badge badge--tonal">Open Source</span>
             </div>
-            <p class="project__desc">
-              One sentence: what it does and why it matters.
-            </p>
+            <p class="project__desc">One sentence: what it does and why it matters.</p>
             <div class="project__tags">
               <span class="chip chip--small">Python</span>
               <span class="chip chip--small">ML</span>
@@ -286,9 +352,7 @@
               <h3 class="project__title">Project Name</h3>
               <span class="badge">Research</span>
             </div>
-            <p class="project__desc">
-              One sentence: what you built, metrics, or outcome.
-            </p>
+            <p class="project__desc">One sentence: what you built, metrics, or outcome.</p>
             <div class="project__tags">
               <span class="chip chip--small">Java</span>
               <span class="chip chip--small">Systems</span>
@@ -311,9 +375,7 @@
               <h3 class="project__title">Project Name</h3>
               <span class="badge badge--tonal">Product</span>
             </div>
-            <p class="project__desc">
-              One sentence: audience + value proposition.
-            </p>
+            <p class="project__desc">One sentence: audience + value proposition.</p>
             <div class="project__tags">
               <span class="chip chip--small">Web</span>
               <span class="chip chip--small">CSS</span>
@@ -392,9 +454,7 @@
               <span class="material-symbols-rounded" aria-hidden="true">bolt</span>
               <div>
                 <div class="callout__title">Make it yours</div>
-                <div class="callout__text">
-                  Replace “Project Name”, update stats, and set your real links.
-                </div>
+                <div class="callout__text">Replace “Project Name”, update stats, and set your real links.</div>
               </div>
             </div>
           </article>
@@ -419,11 +479,18 @@
   <script>
     (function () {
       const root = document.documentElement;
-      const toggle = document.getElementById("themeToggle");
+
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
       const year = document.getElementById("year");
       year.textContent = new Date().getFullYear();
 
-      // Load saved theme
+      const menuBtn = document.getElementById("menuBtn");
+      const closeMenu = document.getElementById("closeMenu");
+      const drawer = document.getElementById("mobileNav");
+      const scrim = document.getElementById("scrim");
+
+      // --- Theme ---
       const saved = localStorage.getItem("theme");
       if (saved === "dark") root.setAttribute("data-theme", "dark");
       if (saved === "light") root.setAttribute("data-theme", "light");
@@ -431,14 +498,12 @@
       function currentTheme() {
         return root.getAttribute("data-theme") || "system";
       }
-
       function nextTheme() {
         const t = currentTheme();
         if (t === "system") return "dark";
         if (t === "dark") return "light";
         return "system";
       }
-
       function applyTheme(t) {
         if (t === "system") {
           root.removeAttribute("data-theme");
@@ -447,9 +512,54 @@
           root.setAttribute("data-theme", t);
           localStorage.setItem("theme", t);
         }
+        updateThemeIcon();
+      }
+      function updateThemeIcon() {
+        const t = currentTheme();
+        themeIcon.textContent = (t === "dark") ? "dark_mode" : (t === "light") ? "light_mode" : "contrast";
+      }
+      updateThemeIcon();
+      themeToggle.addEventListener("click", () => applyTheme(nextTheme()));
+
+      // --- Drawer ---
+      function openDrawer() {
+        drawer.hidden = false;
+        scrim.hidden = false;
+        requestAnimationFrame(() => {
+          drawer.classList.add("drawer--open");
+          scrim.classList.add("scrim--show");
+        });
+        menuBtn.setAttribute("aria-expanded", "true");
+        // focus first link
+        const first = drawer.querySelector("a");
+        first && first.focus();
+      }
+      function closeDrawerFn() {
+        drawer.classList.remove("drawer--open");
+        scrim.classList.remove("scrim--show");
+        menuBtn.setAttribute("aria-expanded", "false");
+        setTimeout(() => {
+          drawer.hidden = true;
+          scrim.hidden = true;
+        }, 180);
+        menuBtn.focus();
       }
 
-      toggle.addEventListener("click", () => applyTheme(nextTheme()));
+      menuBtn.addEventListener("click", () => {
+        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
+        expanded ? closeDrawerFn() : openDrawer();
+      });
+      closeMenu.addEventListener("click", closeDrawerFn);
+      scrim.addEventListener("click", closeDrawerFn);
+
+      drawer.addEventListener("click", (e) => {
+        const a = e.target.closest("a");
+        if (a) closeDrawerFn();
+      });
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !drawer.hidden) closeDrawerFn();
+      });
     })();
   </script>
 </body>
