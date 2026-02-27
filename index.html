@@ -1,176 +1,279 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="color-scheme" content="light dark" />
-<title>Your Name — Portfolio</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Windows 11 / Fluent-inspired portfolio." />
+  <meta name="color-scheme" content="light dark" />
+  <title>Sina Mahboobipour — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Mica-like backdrop -->
+  <div class="mica" aria-hidden="true"></div>
 
-<div class="bg"></div>
-
-<header class="topbar">
-  <div class="topbar__left">
-    <span class="dot"></span>
-    <span class="brand">Portfolio</span>
-  </div>
-
-  <button class="iconbtn" id="themeBtn" aria-label="Toggle theme">
-    <span class="icon"></span>
-  </button>
-</header>
-
-<main class="shell">
-
-<section class="card hero">
-  <div class="hero__left">
-
-    <div class="avatar">
-      <span class="avatar__initials">YN</span>
+  <header class="topbar">
+    <div class="topbar__left">
+      <span class="dot" aria-hidden="true"></span>
+      <span class="brand">Portfolio</span>
     </div>
 
-    <div>
-      <p class="eyebrow">Hello, I'm</p>
-      <h1 class="title">Your Name</h1>
+    <div class="topbar__right">
+      <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
 
-      <p class="subtitle">
-        M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology.
-        I build clean, fast, and modern software experiences with performance and clarity in mind.
-      </p>
+  <main class="shell">
+    <!-- Hero -->
+    <section class="surface hero" aria-label="Introduction">
+      <div class="hero__main">
+        <div class="avatar" aria-hidden="true">
+          <span class="avatar__initials">YN</span>
+        </div>
 
-      <div class="chips">
-        <span class="chip">Python</span>
-        <span class="chip">C++</span>
-        <span class="chip">C#</span>
-        <span class="chip">SQL Server</span>
-        <span class="chip">Machine Learning</span>
-        <span class="chip">HCI</span>
-        <span class="chip">Cloud</span>
+        <div class="hero__text">
+          <p class="eyebrow">Hello, I’m</p>
+          <h1 class="title">Your Name</h1>
+
+          <p class="subtitle">
+            M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology (IUST),
+            with a strong academic foundation in software development, algorithms, and system design.
+            Proficient in Python, C++, C#, and SQL Server, with growing expertise in machine learning, HCI, and cloud computing.
+          </p>
+
+          <div class="chips" aria-label="Skills">
+            <span class="chip">Python</span>
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">HCI</span>
+            <span class="chip">Cloud</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+              GitHub <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="btn" href="#projects">View Projects</a>
+          </div>
+        </div>
       </div>
 
-      <div class="actions">
-        <a class="btn primary" href="#">GitHub →</a>
-        <a class="btn ghost" href="#projects">View Projects</a>
-      </div>
-    </div>
-  </div>
+      <!-- Right column: no stretching, content-sized -->
+      <aside class="hero__meta" aria-label="Quick info">
+        <div class="metaGrid">
+          <article class="meta">
+            <h3>Role</h3>
+            <p>M.Sc. Candidate • Software</p>
+          </article>
+          <article class="meta">
+            <h3>University</h3>
+            <p>Iran University of Science and Technology</p>
+          </article>
+          <article class="meta">
+            <h3>Focus</h3>
+            <p>SE • Algorithms • System Design</p>
+          </article>
+          <article class="meta">
+            <h3>Contact</h3>
+            <p><a class="link" href="mailto:you@email.com">you@email.com</a></p>
+          </article>
+        </div>
+      </aside>
+    </section>
 
-  <aside class="hero__right">
-    <div class="miniGrid">
-      <div class="mini">
-        <h3>Role</h3>
-        <p>M.Sc. Candidate • Software</p>
-      </div>
+    <!-- Main grid -->
+    <section class="grid">
+      <section class="surface" aria-label="About">
+        <div class="head">
+          <h2>About</h2>
+          <p class="muted">Short, scannable, and professional.</p>
+        </div>
 
-      <div class="mini">
-        <h3>University</h3>
-        <p>IUST</p>
-      </div>
+        <p class="body">
+          Passionate about bridging theory and practice, I’m committed to continuous learning, research, and professional growth.
+          My goal is to contribute to innovative solutions in software engineering and emerging technologies, while building meaningful collaborations.
+        </p>
 
-      <div class="mini">
-        <h3>Focus</h3>
-        <p>SE • Algorithms • System Design</p>
-      </div>
+        <div class="rows" aria-label="Highlights">
+          <div class="row">
+            <span class="k">Core</span>
+            <span class="v">Software Engineering • Algorithms • System Design</span>
+          </div>
+          <div class="row">
+            <span class="k">Interests</span>
+            <span class="v">Machine Learning • HCI • Cloud Computing</span>
+          </div>
+          <div class="row">
+            <span class="k">Stack</span>
+            <span class="v">Python • C++ • C# • SQL Server</span>
+          </div>
+        </div>
+      </section>
 
-      <div class="mini">
-        <h3>Contact</h3>
-        <p>you@email.com</p>
-      </div>
-    </div>
-  </aside>
-</section>
+      <section class="surface" id="projects" aria-label="Projects">
+        <div class="head">
+          <h2>Projects</h2>
+          <p class="muted">Replace with real projects + links.</p>
+        </div>
 
+        <div class="projects">
+          <article class="proj">
+            <div class="proj__top">
+              <h3>Glass Dashboard</h3>
+              <span class="tag">UI</span>
+            </div>
+            <p class="muted">Win11-inspired UI with calm motion & clean hierarchy.</p>
+            <div class="proj__links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+              <span class="sep">•</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
 
-<section class="grid">
+          <article class="proj">
+            <div class="proj__top">
+              <h3>Minimal Portfolio</h3>
+              <span class="tag">Web</span>
+            </div>
+            <p class="muted">Fast, accessible portfolio template with theming.</p>
+            <div class="proj__links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+              <span class="sep">•</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
 
-<section class="card">
-  <div class="card__head">
-    <h2>About</h2>
-  </div>
+          <article class="proj">
+            <div class="proj__top">
+              <h3>API Status Page</h3>
+              <span class="tag">Tool</span>
+            </div>
+            <p class="muted">Clear states, readable layout, compact design.</p>
+            <div class="proj__links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+              <span class="sep">•</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
 
-  <p class="body">
-    Strong foundation in software engineering, algorithms, and system design.
-    Passionate about bridging theory and real-world implementation.
-    Committed to continuous learning, research, and building innovative solutions.
-  </p>
-</section>
+          <article class="proj">
+            <div class="proj__top">
+              <h3>Research Helper</h3>
+              <span class="tag">R&D</span>
+            </div>
+            <p class="muted">Prototype for experiments & academic workflows.</p>
+            <div class="proj__links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
+              <span class="sep">•</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
+      <section class="surface" aria-label="Links">
+        <div class="head">
+          <h2>Links</h2>
+          <p class="muted">Everything important in one place.</p>
+        </div>
 
-<section class="card" id="projects">
-  <div class="card__head">
-    <h2>Projects</h2>
-  </div>
+        <div class="tiles">
+          <a class="tile" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+            <span class="tile__icon" aria-hidden="true">⌁</span>
+            <span class="tile__text">
+              <strong>GitHub</strong>
+              <span class="muted">Repositories & code</span>
+            </span>
+          </a>
 
-  <div class="projects">
+          <a class="tile" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+            <span class="tile__icon" aria-hidden="true">in</span>
+            <span class="tile__text">
+              <strong>LinkedIn</strong>
+              <span class="muted">Work & profile</span>
+            </span>
+          </a>
 
-    <div class="project">
-      <h3>Glass Dashboard</h3>
-      <p class="muted">Win11-style UI with modern glass system.</p>
-    </div>
+          <a class="tile" href="https://x.com/your-handle" target="_blank" rel="noreferrer">
+            <span class="tile__icon" aria-hidden="true">𝕏</span>
+            <span class="tile__text">
+              <strong>X</strong>
+              <span class="muted">Updates & thoughts</span>
+            </span>
+          </a>
 
-    <div class="project">
-      <h3>Minimal Portfolio</h3>
-      <p class="muted">High-performance responsive template.</p>
-    </div>
+          <a class="tile" href="mailto:you@email.com">
+            <span class="tile__icon" aria-hidden="true">@</span>
+            <span class="tile__text">
+              <strong>Email</strong>
+              <span class="muted">Let’s talk</span>
+            </span>
+          </a>
+        </div>
+      </section>
 
-    <div class="project">
-      <h3>API Status Page</h3>
-      <p class="muted">Clean hierarchy and modern status UI.</p>
-    </div>
+      <section class="surface" aria-label="Widget">
+        <div class="head">
+          <h2>Now Playing</h2>
+          <p class="muted">A small Windows-like widget.</p>
+        </div>
 
-    <div class="project">
-      <h3>Research Tool</h3>
-      <p class="muted">Academic-focused system prototype.</p>
-    </div>
+        <div class="widget">
+          <div class="bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="widget__text">
+            <p class="widget__title">Deep Focus</p>
+            <p class="muted">Design • Code • Improve</p>
+          </div>
+          <button class="pill" type="button">Open</button>
+        </div>
+      </section>
+    </section>
+  </main>
 
-  </div>
-</section>
+  <footer class="footer">
+    <p class="muted">© <span id="year"></span> Your Name • Fluent/Win11-inspired</p>
+  </footer>
 
-</section>
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById('themeBtn');
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
 
-</main>
+    const storageKey = 'theme';
+    const saved = localStorage.getItem(storageKey);
 
-<footer class="footer">
-  © <span id="year"></span> Your Name
-</footer>
+    function applyTheme(mode) {
+      if (mode === 'dark') root.setAttribute('data-theme', 'dark');
+      else if (mode === 'light') root.setAttribute('data-theme', 'light');
+      else root.removeAttribute('data-theme');
+    }
+    function currentTheme() {
+      return root.getAttribute('data-theme') || 'system';
+    }
+    if (saved) applyTheme(saved);
 
-
-<script>
-const root = document.documentElement;
-const btn = document.getElementById('themeBtn');
-const year = document.getElementById('year');
-year.textContent = new Date().getFullYear();
-
-const storageKey = 'theme';
-const saved = localStorage.getItem(storageKey);
-
-function applyTheme(mode){
-  if(mode === 'dark') root.setAttribute('data-theme','dark');
-  else if(mode === 'light') root.setAttribute('data-theme','light');
-  else root.removeAttribute('data-theme');
-}
-function currentTheme(){
-  return root.getAttribute('data-theme') || 'system';
-}
-
-if(saved) applyTheme(saved);
-
-btn.addEventListener('click',()=>{
-  const mode = currentTheme();
-  const next = mode === 'system' ? 'dark' : mode === 'dark' ? 'light' : 'system';
-
-  if(next === 'system'){
-    localStorage.removeItem(storageKey);
-    applyTheme('system');
-  }else{
-    localStorage.setItem(storageKey,next);
-    applyTheme(next);
-  }
-});
-</script>
-
+    btn.addEventListener('click', () => {
+      const mode = currentTheme();
+      const next = mode === 'system' ? 'dark' : mode === 'dark' ? 'light' : 'system';
+      if (next === 'system') {
+        localStorage.removeItem(storageKey);
+        applyTheme('system');
+      } else {
+        localStorage.setItem(storageKey, next);
+        applyTheme(next);
+      }
+      btn.classList.remove('tap');
+      void btn.offsetWidth;
+      btn.classList.add('tap');
+    });
+  </script>
 </body>
 </html>
