@@ -1,371 +1,456 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Sina — Portfolio</title>
+  <meta name="description" content="Sina — Master of Computer Science at Iran University of Science and Technology." />
 
-    <!-- ✅ Fill these -->
-    <title>Your Name — Portfolio</title>
-    <meta name="description" content="Your short bio: developer, designer, student, etc." />
+  <!-- Optional: Material Symbols (Google icons) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:FILL@0..1&display=swap"
+    rel="stylesheet"
+  />
 
-    <!-- Open Graph (nice previews when shared) -->
-    <meta property="og:title" content="Your Name — Portfolio" />
-    <meta property="og:description" content="Your short bio: developer, designer, student, etc." />
-    <meta property="og:type" content="website" />
-    <!-- Optional: add an image later (place in repo and update link) -->
-    <!-- <meta property="og:image" content="https://YOUR-USERNAME.github.io/og-image.png" /> -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E" />
-  </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#" aria-label="Homepage">
-          <span class="brand-mark" aria-hidden="true">◆</span>
-          <span class="brand-text">YourName</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="header-actions">
-          <!-- ✅ Replace with your links -->
-          <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">
-            GitHub
-            <span class="icon" aria-hidden="true">↗</span>
-          </a>
-          <a class="btn btn-primary" href="#contact">
-            Let’s talk
-            <span class="icon" aria-hidden="true">→</span>
-          </a>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">S</div>
+        <div class="brand__text">
+          <div class="brand__name">Sina</div>
+          <div class="brand__tag">Computer Science</div>
         </div>
       </div>
-    </header>
 
-    <main id="content">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Hello! I’m</p>
-            <!-- ✅ Your name -->
-            <h1 class="headline">Your Name</h1>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#education">Education</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
 
-            <!-- ✅ Your tagline -->
-            <p class="subhead">
-              I build <strong>fast</strong>, <strong>clean</strong>, and <strong>useful</strong> things for the web.
-              Interested in <span class="pill">Frontend</span> <span class="pill">Backend</span> <span class="pill">AI</span>.
-            </p>
+      <div class="topbar__actions">
+        <button class="icon-btn" type="button" id="themeToggle" aria-label="Toggle theme">
+          <span class="material-symbols-rounded" aria-hidden="true">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-            <div class="cta-row">
-              <!-- ✅ Replace -->
-              <a class="btn btn-primary" href="mailto:you@email.com">
-                Email me <span class="icon" aria-hidden="true">✉</span>
-              </a>
-              <!-- ✅ Replace -->
-              <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noreferrer">
-                LinkedIn <span class="icon" aria-hidden="true">↗</span>
-              </a>
-              <!-- ✅ Optional: add resume.pdf to repo root -->
-              <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noreferrer">
-                Resume <span class="icon" aria-hidden="true">↓</span>
-              </a>
-            </div>
-
-            <dl class="quick-stats" aria-label="Quick stats">
-              <!-- ✅ Edit numbers/text -->
-              <div class="stat">
-                <dt>Location</dt>
-                <dd>City, Country</dd>
-              </div>
-              <div class="stat">
-                <dt>Focus</dt>
-                <dd>Web • Apps • Open Source</dd>
-              </div>
-              <div class="stat">
-                <dt>Availability</dt>
-                <dd>Open to opportunities</dd>
-              </div>
-            </dl>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="pill" role="note">
+            <span class="material-symbols-rounded" aria-hidden="true">school</span>
+            <span>Master of Computer Science</span>
           </div>
 
-          <aside class="hero-card" aria-label="Profile card">
+          <h1 class="hero__title">
+            Hi, I’m <span class="text-gradient">Sina</span>.
+          </h1>
+
+          <p class="hero__subtitle">
+            Master of Computer Science at <strong>Iran University of Science and Technology</strong>.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--filled" href="#contact">
+              <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+              Contact
+            </a>
+            <a class="btn btn--tonal" href="#projects">
+              <span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span>
+              View Projects
+            </a>
+            <a class="btn btn--outlined" href="#about">
+              <span class="material-symbols-rounded" aria-hidden="true">person</span>
+              About Me
+            </a>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">AI / ML</span>
+            <span class="chip">Backend</span>
+            <span class="chip">Research</span>
+            <span class="chip">Open Source</span>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-label="Profile card">
+          <div class="profile">
             <div class="avatar" aria-hidden="true">
-              <!-- You can replace this with an <img> later -->
-              <span>YN</span>
+              <span class="material-symbols-rounded">person</span>
             </div>
 
-            <div class="card-body">
-              <h2 class="card-title">Now</h2>
-              <p class="card-text">
-                Currently working on <strong>Project Name</strong> — a short description of what you’re building.
-              </p>
-
-              <div class="card-links" aria-label="Highlights">
-                <!-- ✅ Replace -->
-                <a class="chip" href="#projects">Featured projects</a>
-                <a class="chip" href="https://github.com/YOUR-USERNAME?tab=repositories" target="_blank" rel="noreferrer">Repositories</a>
-                <a class="chip" href="#contact">Contact</a>
-              </div>
-
-              <div class="mini">
-                <p class="mini-title">Top strengths</p>
-                <ul class="mini-list">
-                  <!-- ✅ Replace -->
-                  <li>Problem solving</li>
-                  <li>Clean UI</li>
-                  <li>Readable code</li>
-                </ul>
-              </div>
+            <div class="profile__meta">
+              <div class="profile__name">Sina</div>
+              <div class="profile__role">M.Sc. Computer Science</div>
+              <div class="profile__org">Iran University of Science and Technology</div>
             </div>
-          </aside>
-        </div>
 
-        <div class="container">
-          <div class="divider" aria-hidden="true"></div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>About</h2>
-            <p>Write a short, honest bio. Keep it simple and specific.</p>
-          </div>
-
-          <div class="panel">
-            <!-- ✅ Replace -->
-            <p>
-              I’m a <strong>developer</strong> who enjoys building products that look great and feel fast.
-              I care about <em>performance</em>, <em>accessibility</em>, and <em>clean architecture</em>.
-            </p>
-            <p>
-              I like collaborating, documenting my work, and contributing to open source.
-              Outside coding, I enjoy: <strong>Music</strong>, <strong>Reading</strong>, <strong>Sports</strong>.
-            </p>
-
-            <div class="badges" aria-label="Highlights">
-              <!-- ✅ Replace -->
-              <span class="badge">Open Source</span>
-              <span class="badge">Team Player</span>
-              <span class="badge">Always Learning</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SKILLS -->
-      <section id="skills" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Skills</h2>
-            <p>Show what you’re confident with (and what you’re learning).</p>
-          </div>
-
-          <div class="grid-3">
-            <article class="card">
-              <h3>Frontend</h3>
-              <ul class="tag-list">
-                <!-- ✅ Replace -->
-                <li class="tag">HTML</li>
-                <li class="tag">CSS</li>
-                <li class="tag">JavaScript</li>
-                <li class="tag">React</li>
-                <li class="tag">Accessibility</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Backend</h3>
-              <ul class="tag-list">
-                <!-- ✅ Replace -->
-                <li class="tag">Node.js</li>
-                <li class="tag">Express</li>
-                <li class="tag">REST APIs</li>
-                <li class="tag">SQL</li>
-                <li class="tag">Auth</li>
-              </ul>
-            </article>
-
-            <article class="card">
-              <h3>Tooling</h3>
-              <ul class="tag-list">
-                <!-- ✅ Replace -->
-                <li class="tag">Git</li>
-                <li class="tag">GitHub</li>
-                <li class="tag">Linux</li>
-                <li class="tag">CI/CD</li>
-                <li class="tag">Testing</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS -->
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Projects</h2>
-            <p>2–6 پروژه‌ی قوی بهتر از 20 پروژه‌ی ضعیف است. برای هر پروژه: مسئله، راه‌حل، نتیجه.</p>
-          </div>
-
-          <div class="projects">
-            <!-- ✅ Project 1 -->
-            <article class="project">
-              <div class="project-top">
-                <h3>Project One</h3>
-                <p class="project-meta">2026 • Web App • Open Source</p>
+            <div class="profile__stats" role="list">
+              <div class="stat" role="listitem">
+                <div class="stat__num">—</div>
+                <div class="stat__label">Years</div>
               </div>
-              <p class="project-desc">
-                One sentence: what it does + for whom. Then a short value/outcome.
-              </p>
-
-              <ul class="project-points">
-                <li>Key feature or achievement with a measurable result (if possible).</li>
-                <li>Tech highlight (e.g., caching, accessibility, testing, performance).</li>
-              </ul>
-
-              <div class="project-actions">
-                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/REPO" target="_blank" rel="noreferrer">
-                  Code <span class="icon" aria-hidden="true">↗</span>
-                </a>
-                <a class="btn btn-primary" href="https://YOUR-LIVE-DEMO" target="_blank" rel="noreferrer">
-                  Live Demo <span class="icon" aria-hidden="true">↗</span>
-                </a>
+              <div class="stat" role="listitem">
+                <div class="stat__num">—</div>
+                <div class="stat__label">Projects</div>
               </div>
-            </article>
-
-            <!-- ✅ Project 2 -->
-            <article class="project">
-              <div class="project-top">
-                <h3>Project Two</h3>
-                <p class="project-meta">2025 • API • Automation</p>
-              </div>
-              <p class="project-desc">
-                Short description. Make it clear why it matters.
-              </p>
-
-              <ul class="project-points">
-                <li>Reduced time/cost or improved workflow by X% (if you can).</li>
-                <li>Used clean architecture and meaningful documentation.</li>
-              </ul>
-
-              <div class="project-actions">
-                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/REPO2" target="_blank" rel="noreferrer">
-                  Code <span class="icon" aria-hidden="true">↗</span>
-                </a>
-                <a class="btn btn-ghost" href="#" aria-disabled="true">
-                  Case Study <span class="icon" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- TIMELINE -->
-      <section id="timeline" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Timeline</h2>
-            <p>Experience, education, and achievements.</p>
-          </div>
-
-          <ol class="timeline" aria-label="Timeline">
-            <!-- ✅ Replace items -->
-            <li class="timeline-item">
-              <div class="time">2026 — Present</div>
-              <div class="bubble">
-                <h3>Role / Activity</h3>
-                <p>Short description of what you do and the impact you create.</p>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="time">2025</div>
-              <div class="bubble">
-                <h3>Milestone</h3>
-                <p>Certificate, competition, internship, open-source contribution, etc.</p>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="time">2024</div>
-              <div class="bubble">
-                <h3>Education / Learning</h3>
-                <p>What you studied, what you built, what you learned.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>Contact</h2>
-            <p>Make it easy for people to reach you.</p>
-          </div>
-
-          <div class="contact">
-            <div class="panel">
-              <h3>Let’s build something</h3>
-              <p>
-                Email is best. If you message me, include a short context and what you’re looking for.
-              </p>
-
-              <div class="contact-actions">
-                <!-- ✅ Replace -->
-                <a class="btn btn-primary" href="mailto:you@email.com">you@email.com</a>
-                <!-- ✅ Replace -->
-                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">
-                  GitHub <span class="icon" aria-hidden="true">↗</span>
-                </a>
-                <!-- ✅ Replace -->
-                <a class="btn btn-ghost" href="https://t.me/YOUR-ID" target="_blank" rel="noreferrer">
-                  Telegram <span class="icon" aria-hidden="true">↗</span>
-                </a>
+              <div class="stat" role="listitem">
+                <div class="stat__num">—</div>
+                <div class="stat__label">Papers</div>
               </div>
             </div>
 
-            <div class="panel subtle">
-              <h3>Quick checklist</h3>
-              <ul class="checklist">
-                <li>Put your best 2–4 projects first.</li>
-                <li>Add real outcomes (numbers) when possible.</li>
-                <li>Keep text short. Use bullets.</li>
-                <li>Make sure links work on mobile.</li>
-              </ul>
+            <div class="profile__links">
+              <!-- Replace # with your real links -->
+              <a class="icon-link" href="#" aria-label="GitHub">
+                <span class="material-symbols-rounded" aria-hidden="true">code</span>
+              </a>
+              <a class="icon-link" href="#" aria-label="LinkedIn">
+                <span class="material-symbols-rounded" aria-hidden="true">work</span>
+              </a>
+              <a class="icon-link" href="#" aria-label="Google Scholar">
+                <span class="material-symbols-rounded" aria-hidden="true">menu_book</span>
+              </a>
+              <a class="icon-link" href="#" aria-label="Email">
+                <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
+              </a>
+            </div>
+
+            <div class="divider" role="separator" aria-hidden="true"></div>
+
+            <div class="profile__note">
+              <span class="material-symbols-rounded" aria-hidden="true">tips_and_updates</span>
+              <span>Tip: Edit the placeholders (—) and links to personalize fast.</span>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year">2026</span> Your Name. Built with HTML + CSS.</p>
-        <p class="footnote">
-          Tip: Host this on GitHub Pages (Settings → Pages → Deploy from branch).
-        </p>
+        </aside>
       </div>
-    </footer>
 
-    <!-- No JS needed; this is just to keep the year fresh even if you forget -->
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">About</h2>
+          <p class="section__desc">
+            Write 3–5 lines about your focus, what you build, and what you’re looking for.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <div class="card__title">
+              <span class="material-symbols-rounded" aria-hidden="true">interests</span>
+              <h3>What I do</h3>
+            </div>
+            <p class="card__text">
+              <!-- Replace this text -->
+              I build reliable software and explore research directions in computer science.
+              I care about clean architecture, performance, and delightful UX.
+            </p>
+
+            <div class="list">
+              <div class="list__item">
+                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                <span>Replace this with your key skills (e.g., Python, Java, ML, Systems)</span>
+              </div>
+              <div class="list__item">
+                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                <span>Add your interests (e.g., NLP, CV, Distributed Systems)</span>
+              </div>
+              <div class="list__item">
+                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
+                <span>Add what you’re looking for (internship, research collab, etc.)</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card--surface-variant">
+            <div class="card__title">
+              <span class="material-symbols-rounded" aria-hidden="true">emoji_objects</span>
+              <h3>Highlights</h3>
+            </div>
+
+            <div class="kv">
+              <div class="kv__row">
+                <div class="kv__k">Name</div>
+                <div class="kv__v">Sina</div>
+              </div>
+              <div class="kv__row">
+                <div class="kv__k">Degree</div>
+                <div class="kv__v">M.Sc. Computer Science</div>
+              </div>
+              <div class="kv__row">
+                <div class="kv__k">University</div>
+                <div class="kv__v">Iran University of Science and Technology</div>
+              </div>
+              <div class="kv__row">
+                <div class="kv__k">Location</div>
+                <div class="kv__v">—</div>
+              </div>
+            </div>
+
+            <div class="inline-actions">
+              <a class="btn btn--outlined" href="#projects">
+                <span class="material-symbols-rounded" aria-hidden="true">auto_awesome</span>
+                Showcase Work
+              </a>
+              <a class="btn btn--tonal" href="#contact">
+                <span class="material-symbols-rounded" aria-hidden="true">handshake</span>
+                Collaborate
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Education</h2>
+          <p class="section__desc">Keep it short and scannable.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="card timeline__item">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__top">
+                <h3 class="timeline__title">Master of Computer Science</h3>
+                <span class="badge">Current</span>
+              </div>
+              <div class="timeline__meta">
+                Iran University of Science and Technology • <span class="muted">Tehran, Iran</span>
+              </div>
+              <p class="timeline__text">
+                <!-- Replace this line -->
+                Thesis/Focus: — • Relevant coursework: —
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Projects</h2>
+          <p class="section__desc">Add 3–6 strong projects. Link to GitHub and a live demo if possible.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- Project Card -->
+          <article class="card project">
+            <div class="project__top">
+              <h3 class="project__title">Project Name</h3>
+              <span class="badge badge--tonal">Open Source</span>
+            </div>
+            <p class="project__desc">
+              One sentence: what it does and why it matters.
+            </p>
+            <div class="project__tags">
+              <span class="chip chip--small">Python</span>
+              <span class="chip chip--small">ML</span>
+              <span class="chip chip--small">API</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--outlined btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                Code
+              </a>
+              <a class="btn btn--tonal btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+                Demo
+              </a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3 class="project__title">Project Name</h3>
+              <span class="badge">Research</span>
+            </div>
+            <p class="project__desc">
+              One sentence: what you built, metrics, or outcome.
+            </p>
+            <div class="project__tags">
+              <span class="chip chip--small">Java</span>
+              <span class="chip chip--small">Systems</span>
+              <span class="chip chip--small">Docker</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--outlined btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">description</span>
+                Paper
+              </a>
+              <a class="btn btn--tonal btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                Repo
+              </a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project__top">
+              <h3 class="project__title">Project Name</h3>
+              <span class="badge badge--tonal">Product</span>
+            </div>
+            <p class="project__desc">
+              One sentence: audience + value proposition.
+            </p>
+            <div class="project__tags">
+              <span class="chip chip--small">Web</span>
+              <span class="chip chip--small">CSS</span>
+              <span class="chip chip--small">UX</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--outlined btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
+                Live
+              </a>
+              <a class="btn btn--tonal btn--sm" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Contact</h2>
+          <p class="section__desc">Put your best contact methods here.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <div class="card__title">
+              <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
+              <h3>Links</h3>
+            </div>
+
+            <div class="list">
+              <a class="list__link" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">code</span>
+                <span>GitHub</span>
+                <span class="spacer"></span>
+                <span class="material-symbols-rounded" aria-hidden="true">chevron_right</span>
+              </a>
+
+              <a class="list__link" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">work</span>
+                <span>LinkedIn</span>
+                <span class="spacer"></span>
+                <span class="material-symbols-rounded" aria-hidden="true">chevron_right</span>
+              </a>
+
+              <a class="list__link" href="#">
+                <span class="material-symbols-rounded" aria-hidden="true">menu_book</span>
+                <span>Google Scholar</span>
+                <span class="spacer"></span>
+                <span class="material-symbols-rounded" aria-hidden="true">chevron_right</span>
+              </a>
+
+              <a class="list__link" href="mailto:your@email.com">
+                <span class="material-symbols-rounded" aria-hidden="true">mail</span>
+                <span>Email</span>
+                <span class="spacer"></span>
+                <span class="material-symbols-rounded" aria-hidden="true">chevron_right</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--surface-variant">
+            <div class="card__title">
+              <span class="material-symbols-rounded" aria-hidden="true">verified</span>
+              <h3>Quick note</h3>
+            </div>
+            <p class="card__text">
+              If you want, add a short collaboration pitch here (1–2 lines).
+            </p>
+
+            <div class="callout">
+              <span class="material-symbols-rounded" aria-hidden="true">bolt</span>
+              <div>
+                <div class="callout__title">Make it yours</div>
+                <div class="callout__text">
+                  Replace “Project Name”, update stats, and set your real links.
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__left">
+        <span class="material-symbols-rounded" aria-hidden="true">code</span>
+        <span>© <span id="year"></span> Sina</span>
+      </div>
+      <a class="footer__top" href="#main">
+        Back to top
+        <span class="material-symbols-rounded" aria-hidden="true">arrow_upward</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById("themeToggle");
+      const year = document.getElementById("year");
+      year.textContent = new Date().getFullYear();
+
+      // Load saved theme
+      const saved = localStorage.getItem("theme");
+      if (saved === "dark") root.setAttribute("data-theme", "dark");
+      if (saved === "light") root.setAttribute("data-theme", "light");
+
+      function currentTheme() {
+        return root.getAttribute("data-theme") || "system";
+      }
+
+      function nextTheme() {
+        const t = currentTheme();
+        if (t === "system") return "dark";
+        if (t === "dark") return "light";
+        return "system";
+      }
+
+      function applyTheme(t) {
+        if (t === "system") {
+          root.removeAttribute("data-theme");
+          localStorage.removeItem("theme");
+        } else {
+          root.setAttribute("data-theme", t);
+          localStorage.setItem("theme", t);
+        }
+      }
+
+      toggle.addEventListener("click", () => applyTheme(nextTheme()));
+    })();
+  </script>
+</body>
 </html>
