@@ -1,279 +1,371 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Windows 11 / Fluent-inspired portfolio." />
-  <meta name="color-scheme" content="light dark" />
-  <title>Sina Mahboobipour — Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
-  <!-- Mica-like backdrop -->
-  <div class="mica" aria-hidden="true"></div>
+    <!-- ✅ Fill these -->
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Your short bio: developer, designer, student, etc." />
 
-  <header class="topbar">
-    <div class="topbar__left">
-      <span class="dot" aria-hidden="true"></span>
-      <span class="brand">Portfolio</span>
-    </div>
+    <!-- Open Graph (nice previews when shared) -->
+    <meta property="og:title" content="Your Name — Portfolio" />
+    <meta property="og:description" content="Your short bio: developer, designer, student, etc." />
+    <meta property="og:type" content="website" />
+    <!-- Optional: add an image later (place in repo and update link) -->
+    <!-- <meta property="og:image" content="https://YOUR-USERNAME.github.io/og-image.png" /> -->
 
-    <div class="topbar__right">
-      <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
-        <span class="icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </header>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%80%3C/text%3E%3C/svg%3E" />
+  </head>
 
-  <main class="shell">
-    <!-- Hero -->
-    <section class="surface hero" aria-label="Introduction">
-      <div class="hero__main">
-        <div class="avatar" aria-hidden="true">
-          <span class="avatar__initials">YN</span>
-        </div>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
 
-        <div class="hero__text">
-          <p class="eyebrow">Hello, I’m</p>
-          <h1 class="title">Your Name</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="Homepage">
+          <span class="brand-mark" aria-hidden="true">◆</span>
+          <span class="brand-text">YourName</span>
+        </a>
 
-          <p class="subtitle">
-            M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology (IUST),
-            with a strong academic foundation in software development, algorithms, and system design.
-            Proficient in Python, C++, C#, and SQL Server, with growing expertise in machine learning, HCI, and cloud computing.
-          </p>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-          <div class="chips" aria-label="Skills">
-            <span class="chip">Python</span>
-            <span class="chip">C++</span>
-            <span class="chip">C#</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">Machine Learning</span>
-            <span class="chip">HCI</span>
-            <span class="chip">Cloud</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn primary" href="https://github.com/your-username" target="_blank" rel="noreferrer">
-              GitHub <span class="btn__arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="btn" href="#projects">View Projects</a>
-          </div>
+        <div class="header-actions">
+          <!-- ✅ Replace with your links -->
+          <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">
+            GitHub
+            <span class="icon" aria-hidden="true">↗</span>
+          </a>
+          <a class="btn btn-primary" href="#contact">
+            Let’s talk
+            <span class="icon" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
+    </header>
 
-      <!-- Right column: no stretching, content-sized -->
-      <aside class="hero__meta" aria-label="Quick info">
-        <div class="metaGrid">
-          <article class="meta">
-            <h3>Role</h3>
-            <p>M.Sc. Candidate • Software</p>
-          </article>
-          <article class="meta">
-            <h3>University</h3>
-            <p>Iran University of Science and Technology</p>
-          </article>
-          <article class="meta">
-            <h3>Focus</h3>
-            <p>SE • Algorithms • System Design</p>
-          </article>
-          <article class="meta">
-            <h3>Contact</h3>
-            <p><a class="link" href="mailto:you@email.com">you@email.com</a></p>
-          </article>
+    <main id="content">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Hello! I’m</p>
+            <!-- ✅ Your name -->
+            <h1 class="headline">Your Name</h1>
+
+            <!-- ✅ Your tagline -->
+            <p class="subhead">
+              I build <strong>fast</strong>, <strong>clean</strong>, and <strong>useful</strong> things for the web.
+              Interested in <span class="pill">Frontend</span> <span class="pill">Backend</span> <span class="pill">AI</span>.
+            </p>
+
+            <div class="cta-row">
+              <!-- ✅ Replace -->
+              <a class="btn btn-primary" href="mailto:you@email.com">
+                Email me <span class="icon" aria-hidden="true">✉</span>
+              </a>
+              <!-- ✅ Replace -->
+              <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noreferrer">
+                LinkedIn <span class="icon" aria-hidden="true">↗</span>
+              </a>
+              <!-- ✅ Optional: add resume.pdf to repo root -->
+              <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noreferrer">
+                Resume <span class="icon" aria-hidden="true">↓</span>
+              </a>
+            </div>
+
+            <dl class="quick-stats" aria-label="Quick stats">
+              <!-- ✅ Edit numbers/text -->
+              <div class="stat">
+                <dt>Location</dt>
+                <dd>City, Country</dd>
+              </div>
+              <div class="stat">
+                <dt>Focus</dt>
+                <dd>Web • Apps • Open Source</dd>
+              </div>
+              <div class="stat">
+                <dt>Availability</dt>
+                <dd>Open to opportunities</dd>
+              </div>
+            </dl>
+          </div>
+
+          <aside class="hero-card" aria-label="Profile card">
+            <div class="avatar" aria-hidden="true">
+              <!-- You can replace this with an <img> later -->
+              <span>YN</span>
+            </div>
+
+            <div class="card-body">
+              <h2 class="card-title">Now</h2>
+              <p class="card-text">
+                Currently working on <strong>Project Name</strong> — a short description of what you’re building.
+              </p>
+
+              <div class="card-links" aria-label="Highlights">
+                <!-- ✅ Replace -->
+                <a class="chip" href="#projects">Featured projects</a>
+                <a class="chip" href="https://github.com/YOUR-USERNAME?tab=repositories" target="_blank" rel="noreferrer">Repositories</a>
+                <a class="chip" href="#contact">Contact</a>
+              </div>
+
+              <div class="mini">
+                <p class="mini-title">Top strengths</p>
+                <ul class="mini-list">
+                  <!-- ✅ Replace -->
+                  <li>Problem solving</li>
+                  <li>Clean UI</li>
+                  <li>Readable code</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
         </div>
-      </aside>
-    </section>
 
-    <!-- Main grid -->
-    <section class="grid">
-      <section class="surface" aria-label="About">
-        <div class="head">
-          <h2>About</h2>
-          <p class="muted">Short, scannable, and professional.</p>
+        <div class="container">
+          <div class="divider" aria-hidden="true"></div>
         </div>
+      </section>
 
-        <p class="body">
-          Passionate about bridging theory and practice, I’m committed to continuous learning, research, and professional growth.
-          My goal is to contribute to innovative solutions in software engineering and emerging technologies, while building meaningful collaborations.
+      <!-- ABOUT -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>About</h2>
+            <p>Write a short, honest bio. Keep it simple and specific.</p>
+          </div>
+
+          <div class="panel">
+            <!-- ✅ Replace -->
+            <p>
+              I’m a <strong>developer</strong> who enjoys building products that look great and feel fast.
+              I care about <em>performance</em>, <em>accessibility</em>, and <em>clean architecture</em>.
+            </p>
+            <p>
+              I like collaborating, documenting my work, and contributing to open source.
+              Outside coding, I enjoy: <strong>Music</strong>, <strong>Reading</strong>, <strong>Sports</strong>.
+            </p>
+
+            <div class="badges" aria-label="Highlights">
+              <!-- ✅ Replace -->
+              <span class="badge">Open Source</span>
+              <span class="badge">Team Player</span>
+              <span class="badge">Always Learning</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Skills</h2>
+            <p>Show what you’re confident with (and what you’re learning).</p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <h3>Frontend</h3>
+              <ul class="tag-list">
+                <!-- ✅ Replace -->
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">React</li>
+                <li class="tag">Accessibility</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Backend</h3>
+              <ul class="tag-list">
+                <!-- ✅ Replace -->
+                <li class="tag">Node.js</li>
+                <li class="tag">Express</li>
+                <li class="tag">REST APIs</li>
+                <li class="tag">SQL</li>
+                <li class="tag">Auth</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Tooling</h3>
+              <ul class="tag-list">
+                <!-- ✅ Replace -->
+                <li class="tag">Git</li>
+                <li class="tag">GitHub</li>
+                <li class="tag">Linux</li>
+                <li class="tag">CI/CD</li>
+                <li class="tag">Testing</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p>2–6 پروژه‌ی قوی بهتر از 20 پروژه‌ی ضعیف است. برای هر پروژه: مسئله، راه‌حل، نتیجه.</p>
+          </div>
+
+          <div class="projects">
+            <!-- ✅ Project 1 -->
+            <article class="project">
+              <div class="project-top">
+                <h3>Project One</h3>
+                <p class="project-meta">2026 • Web App • Open Source</p>
+              </div>
+              <p class="project-desc">
+                One sentence: what it does + for whom. Then a short value/outcome.
+              </p>
+
+              <ul class="project-points">
+                <li>Key feature or achievement with a measurable result (if possible).</li>
+                <li>Tech highlight (e.g., caching, accessibility, testing, performance).</li>
+              </ul>
+
+              <div class="project-actions">
+                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/REPO" target="_blank" rel="noreferrer">
+                  Code <span class="icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="btn btn-primary" href="https://YOUR-LIVE-DEMO" target="_blank" rel="noreferrer">
+                  Live Demo <span class="icon" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- ✅ Project 2 -->
+            <article class="project">
+              <div class="project-top">
+                <h3>Project Two</h3>
+                <p class="project-meta">2025 • API • Automation</p>
+              </div>
+              <p class="project-desc">
+                Short description. Make it clear why it matters.
+              </p>
+
+              <ul class="project-points">
+                <li>Reduced time/cost or improved workflow by X% (if you can).</li>
+                <li>Used clean architecture and meaningful documentation.</li>
+              </ul>
+
+              <div class="project-actions">
+                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME/REPO2" target="_blank" rel="noreferrer">
+                  Code <span class="icon" aria-hidden="true">↗</span>
+                </a>
+                <a class="btn btn-ghost" href="#" aria-disabled="true">
+                  Case Study <span class="icon" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="timeline" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Timeline</h2>
+            <p>Experience, education, and achievements.</p>
+          </div>
+
+          <ol class="timeline" aria-label="Timeline">
+            <!-- ✅ Replace items -->
+            <li class="timeline-item">
+              <div class="time">2026 — Present</div>
+              <div class="bubble">
+                <h3>Role / Activity</h3>
+                <p>Short description of what you do and the impact you create.</p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="time">2025</div>
+              <div class="bubble">
+                <h3>Milestone</h3>
+                <p>Certificate, competition, internship, open-source contribution, etc.</p>
+              </div>
+            </li>
+
+            <li class="timeline-item">
+              <div class="time">2024</div>
+              <div class="bubble">
+                <h3>Education / Learning</h3>
+                <p>What you studied, what you built, what you learned.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p>Make it easy for people to reach you.</p>
+          </div>
+
+          <div class="contact">
+            <div class="panel">
+              <h3>Let’s build something</h3>
+              <p>
+                Email is best. If you message me, include a short context and what you’re looking for.
+              </p>
+
+              <div class="contact-actions">
+                <!-- ✅ Replace -->
+                <a class="btn btn-primary" href="mailto:you@email.com">you@email.com</a>
+                <!-- ✅ Replace -->
+                <a class="btn btn-ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">
+                  GitHub <span class="icon" aria-hidden="true">↗</span>
+                </a>
+                <!-- ✅ Replace -->
+                <a class="btn btn-ghost" href="https://t.me/YOUR-ID" target="_blank" rel="noreferrer">
+                  Telegram <span class="icon" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="panel subtle">
+              <h3>Quick checklist</h3>
+              <ul class="checklist">
+                <li>Put your best 2–4 projects first.</li>
+                <li>Add real outcomes (numbers) when possible.</li>
+                <li>Keep text short. Use bullets.</li>
+                <li>Make sure links work on mobile.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Your Name. Built with HTML + CSS.</p>
+        <p class="footnote">
+          Tip: Host this on GitHub Pages (Settings → Pages → Deploy from branch).
         </p>
+      </div>
+    </footer>
 
-        <div class="rows" aria-label="Highlights">
-          <div class="row">
-            <span class="k">Core</span>
-            <span class="v">Software Engineering • Algorithms • System Design</span>
-          </div>
-          <div class="row">
-            <span class="k">Interests</span>
-            <span class="v">Machine Learning • HCI • Cloud Computing</span>
-          </div>
-          <div class="row">
-            <span class="k">Stack</span>
-            <span class="v">Python • C++ • C# • SQL Server</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="surface" id="projects" aria-label="Projects">
-        <div class="head">
-          <h2>Projects</h2>
-          <p class="muted">Replace with real projects + links.</p>
-        </div>
-
-        <div class="projects">
-          <article class="proj">
-            <div class="proj__top">
-              <h3>Glass Dashboard</h3>
-              <span class="tag">UI</span>
-            </div>
-            <p class="muted">Win11-inspired UI with calm motion & clean hierarchy.</p>
-            <div class="proj__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-              <span class="sep">•</span>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj__top">
-              <h3>Minimal Portfolio</h3>
-              <span class="tag">Web</span>
-            </div>
-            <p class="muted">Fast, accessible portfolio template with theming.</p>
-            <div class="proj__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-              <span class="sep">•</span>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj__top">
-              <h3>API Status Page</h3>
-              <span class="tag">Tool</span>
-            </div>
-            <p class="muted">Clear states, readable layout, compact design.</p>
-            <div class="proj__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-              <span class="sep">•</span>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
-            </div>
-          </article>
-
-          <article class="proj">
-            <div class="proj__top">
-              <h3>Research Helper</h3>
-              <span class="tag">R&D</span>
-            </div>
-            <p class="muted">Prototype for experiments & academic workflows.</p>
-            <div class="proj__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
-              <span class="sep">•</span>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="surface" aria-label="Links">
-        <div class="head">
-          <h2>Links</h2>
-          <p class="muted">Everything important in one place.</p>
-        </div>
-
-        <div class="tiles">
-          <a class="tile" href="https://github.com/your-username" target="_blank" rel="noreferrer">
-            <span class="tile__icon" aria-hidden="true">⌁</span>
-            <span class="tile__text">
-              <strong>GitHub</strong>
-              <span class="muted">Repositories & code</span>
-            </span>
-          </a>
-
-          <a class="tile" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
-            <span class="tile__icon" aria-hidden="true">in</span>
-            <span class="tile__text">
-              <strong>LinkedIn</strong>
-              <span class="muted">Work & profile</span>
-            </span>
-          </a>
-
-          <a class="tile" href="https://x.com/your-handle" target="_blank" rel="noreferrer">
-            <span class="tile__icon" aria-hidden="true">𝕏</span>
-            <span class="tile__text">
-              <strong>X</strong>
-              <span class="muted">Updates & thoughts</span>
-            </span>
-          </a>
-
-          <a class="tile" href="mailto:you@email.com">
-            <span class="tile__icon" aria-hidden="true">@</span>
-            <span class="tile__text">
-              <strong>Email</strong>
-              <span class="muted">Let’s talk</span>
-            </span>
-          </a>
-        </div>
-      </section>
-
-      <section class="surface" aria-label="Widget">
-        <div class="head">
-          <h2>Now Playing</h2>
-          <p class="muted">A small Windows-like widget.</p>
-        </div>
-
-        <div class="widget">
-          <div class="bars" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-          </div>
-          <div class="widget__text">
-            <p class="widget__title">Deep Focus</p>
-            <p class="muted">Design • Code • Improve</p>
-          </div>
-          <button class="pill" type="button">Open</button>
-        </div>
-      </section>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p class="muted">© <span id="year"></span> Your Name • Fluent/Win11-inspired</p>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const btn = document.getElementById('themeBtn');
-    const year = document.getElementById('year');
-    year.textContent = new Date().getFullYear();
-
-    const storageKey = 'theme';
-    const saved = localStorage.getItem(storageKey);
-
-    function applyTheme(mode) {
-      if (mode === 'dark') root.setAttribute('data-theme', 'dark');
-      else if (mode === 'light') root.setAttribute('data-theme', 'light');
-      else root.removeAttribute('data-theme');
-    }
-    function currentTheme() {
-      return root.getAttribute('data-theme') || 'system';
-    }
-    if (saved) applyTheme(saved);
-
-    btn.addEventListener('click', () => {
-      const mode = currentTheme();
-      const next = mode === 'system' ? 'dark' : mode === 'dark' ? 'light' : 'system';
-      if (next === 'system') {
-        localStorage.removeItem(storageKey);
-        applyTheme('system');
-      } else {
-        localStorage.setItem(storageKey, next);
-        applyTheme(next);
-      }
-      btn.classList.remove('tap');
-      void btn.offsetWidth;
-      btn.classList.add('tap');
-    });
-  </script>
-</body>
+    <!-- No JS needed; this is just to keep the year fresh even if you forget -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
