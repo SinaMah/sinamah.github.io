@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <!-- Background (lighter DOM: only one element) -->
   <div class="bg" aria-hidden="true"></div>
 
   <header class="topbar">
@@ -37,9 +36,10 @@
         <div class="hero__text">
           <p class="eyebrow">Hello, I'm</p>
           <h1 class="title">Your Name</h1>
+
           <p class="subtitle">
-            I build clean, fast, and beautiful web experiences.
-            Windows 11-inspired glass UI • light/dark mode • responsive.
+            M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology (IUST).
+            I build clean, fast, and beautiful web experiences — with performance, accessibility, and calm UI in mind.
           </p>
 
           <div class="chips" aria-label="Skills">
@@ -47,6 +47,7 @@
             <span class="chip">C++</span>
             <span class="chip">C#</span>
             <span class="chip">SQL Server</span>
+            <span class="chip">Machine Learning</span>
             <span class="chip">HCI</span>
             <span class="chip">Cloud</span>
           </div>
@@ -55,12 +56,12 @@
             <a class="btn primary" href="https://github.com/your-username" target="_blank" rel="noreferrer">
               GitHub <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
-            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#projects">View Projects</a>
           </div>
         </div>
       </div>
 
-      <div class="hero__right" aria-label="Quick stats">
+      <aside class="hero__right" aria-label="Quick stats">
         <div class="miniGrid">
           <article class="mini">
             <h3>Role</h3>
@@ -68,38 +69,37 @@
           </article>
           <article class="mini">
             <h3>University</h3>
-            <p>IUST (Iran University of Science and Technology)</p>
+            <p>Iran University of Science and Technology</p>
           </article>
           <article class="mini">
-            <h3>Location</h3>
-            <p>Baku • Remote</p>
+            <h3>Focus</h3>
+            <p>SE • Algorithms • System Design</p>
           </article>
           <article class="mini">
             <h3>Contact</h3>
             <p><a class="link" href="mailto:you@email.com">you@email.com</a></p>
           </article>
         </div>
-      </div>
+      </aside>
     </section>
 
     <section class="grid">
       <section class="card" aria-label="About">
         <div class="card__head">
           <h2>About</h2>
-          <p class="muted">A quick snapshot of who I am and what I do.</p>
+          <p class="muted">A quick, scannable summary.</p>
         </div>
 
         <p class="body">
-          M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology,
-          with a strong academic foundation in software development, algorithms, and system design.
-          Proficient in Python, C++, C#, and SQL Server, with growing expertise in machine learning,
-          human–computer interaction (HCI), and cloud computing.
+          M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology with a strong academic
+          foundation in software development, algorithms, and system design. Proficient in Python, C++, C#, and SQL Server, with
+          growing expertise in machine learning, human–computer interaction (HCI), and cloud computing.
         </p>
 
         <p class="body">
-          Passionate about bridging theory and practice, I’m committed to continuous learning, research,
-          and professional growth. My goal is to contribute to innovative solutions in software engineering
-          and emerging technologies, while building meaningful collaborations within the global tech community.
+          Passionate about bridging theory and practice, I’m committed to continuous learning, research, and professional growth.
+          My goal is to contribute to innovative solutions in software engineering and emerging technologies, while building
+          meaningful collaborations within the global tech community.
         </p>
 
         <div class="list" aria-label="Highlights">
@@ -112,8 +112,8 @@
             <span class="v">Machine Learning • HCI • Cloud Computing</span>
           </div>
           <div class="row">
-            <span class="k">Working style</span>
-            <span class="v">Clean code • performance • accessibility • calm UI</span>
+            <span class="k">Values</span>
+            <span class="v">Quality • clarity • performance • accessibility</span>
           </div>
         </div>
       </section>
@@ -121,7 +121,7 @@
       <section class="card" id="projects" aria-label="Projects">
         <div class="card__head">
           <h2>Projects</h2>
-          <p class="muted">Replace these with your real projects.</p>
+          <p class="muted">Replace these with your real work.</p>
         </div>
 
         <div class="projects">
@@ -156,7 +156,7 @@
               <h3>API Status Page</h3>
               <span class="tag">Tool</span>
             </div>
-            <p class="muted">Clean hierarchy, readable states, and friendly design system.</p>
+            <p class="muted">Readable states, clean hierarchy, and a calm design system.</p>
             <div class="project__links">
               <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
               <span class="sep">•</span>
@@ -174,7 +174,7 @@
 
         <div class="linksGrid">
           <a class="tile" href="https://github.com/your-username" target="_blank" rel="noreferrer">
-            <span class="tile__icon">⌁</span>
+            <span class="tile__icon" aria-hidden="true">⌁</span>
             <span class="tile__text">
               <strong>GitHub</strong>
               <span class="muted">Repositories & code</span>
@@ -182,7 +182,7 @@
           </a>
 
           <a class="tile" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
-            <span class="tile__icon">in</span>
+            <span class="tile__icon" aria-hidden="true">in</span>
             <span class="tile__text">
               <strong>LinkedIn</strong>
               <span class="muted">Work & profile</span>
@@ -190,7 +190,7 @@
           </a>
 
           <a class="tile" href="https://x.com/your-handle" target="_blank" rel="noreferrer">
-            <span class="tile__icon">𝕏</span>
+            <span class="tile__icon" aria-hidden="true">𝕏</span>
             <span class="tile__text">
               <strong>X</strong>
               <span class="muted">Updates & thoughts</span>
@@ -198,7 +198,7 @@
           </a>
 
           <a class="tile" href="mailto:you@email.com">
-            <span class="tile__icon">@</span>
+            <span class="tile__icon" aria-hidden="true">@</span>
             <span class="tile__text">
               <strong>Email</strong>
               <span class="muted">Let’s talk</span>
