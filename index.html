@@ -6,19 +6,13 @@
   <meta name="description" content="Personal portfolio and links — Windows 11 inspired glass UI." />
   <title>Your Name — Portfolio</title>
 
-  <link rel="stylesheet" href="styles.css" />
-
-  <!-- Optional: nicer system font rendering -->
   <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <!-- Background blobs -->
-  <div class="bg" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
-    <span class="grain"></span>
-  </div>
+  <!-- Background (lighter DOM: only one element) -->
+  <div class="bg" aria-hidden="true"></div>
 
   <header class="topbar">
     <div class="topbar__left">
@@ -28,7 +22,6 @@
 
     <div class="topbar__right">
       <button class="iconbtn" id="themeBtn" type="button" aria-label="Toggle theme" title="Toggle theme">
-        <!-- icons are CSS-driven; keep it light -->
         <span class="icon" aria-hidden="true"></span>
       </button>
     </div>
@@ -38,7 +31,6 @@
     <section class="card hero" aria-label="Introduction">
       <div class="hero__left">
         <div class="avatar" role="img" aria-label="Profile picture placeholder">
-          <span class="avatar__ring"></span>
           <span class="avatar__initials">YN</span>
         </div>
 
@@ -51,20 +43,19 @@
           </p>
 
           <div class="chips" aria-label="Skills">
-            <span class="chip">Front-End</span>
-            <span class="chip">UI/UX</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Performance</span>
+            <span class="chip">Python</span>
+            <span class="chip">C++</span>
+            <span class="chip">C#</span>
+            <span class="chip">SQL Server</span>
+            <span class="chip">HCI</span>
+            <span class="chip">Cloud</span>
           </div>
 
           <div class="actions" aria-label="Primary actions">
             <a class="btn primary" href="https://github.com/your-username" target="_blank" rel="noreferrer">
-              GitHub
-              <span class="btn__arrow" aria-hidden="true">→</span>
+              GitHub <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
-            <a class="btn" href="#projects">
-              View Projects
-            </a>
+            <a class="btn" href="#projects">View Projects</a>
           </div>
         </div>
       </div>
@@ -72,16 +63,16 @@
       <div class="hero__right" aria-label="Quick stats">
         <div class="miniGrid">
           <article class="mini">
-            <h3>Focus</h3>
-            <p>Modern UI, fast UX</p>
+            <h3>Role</h3>
+            <p>M.Sc. Candidate • Software</p>
+          </article>
+          <article class="mini">
+            <h3>University</h3>
+            <p>IUST (Iran University of Science and Technology)</p>
           </article>
           <article class="mini">
             <h3>Location</h3>
             <p>Baku • Remote</p>
-          </article>
-          <article class="mini">
-            <h3>Open to</h3>
-            <p>Collabs & gigs</p>
           </article>
           <article class="mini">
             <h3>Contact</h3>
@@ -95,26 +86,34 @@
       <section class="card" aria-label="About">
         <div class="card__head">
           <h2>About</h2>
-          <p class="muted">A short summary people can scan quickly.</p>
+          <p class="muted">A quick snapshot of who I am and what I do.</p>
         </div>
 
         <p class="body">
-          I’m a developer focused on building polished interfaces with attention to detail.
-          I like creating products that feel calm, modern, and easy to use — with clean code, accessibility, and performance in mind.
+          M.Sc. Candidate in Computer Engineering (Software) at Iran University of Science and Technology,
+          with a strong academic foundation in software development, algorithms, and system design.
+          Proficient in Python, C++, C#, and SQL Server, with growing expertise in machine learning,
+          human–computer interaction (HCI), and cloud computing.
         </p>
 
-        <div class="list">
+        <p class="body">
+          Passionate about bridging theory and practice, I’m committed to continuous learning, research,
+          and professional growth. My goal is to contribute to innovative solutions in software engineering
+          and emerging technologies, while building meaningful collaborations within the global tech community.
+        </p>
+
+        <div class="list" aria-label="Highlights">
           <div class="row">
-            <span class="k">Strengths</span>
-            <span class="v">Design systems, micro-interactions, responsive layouts</span>
+            <span class="k">Core</span>
+            <span class="v">Software Engineering • Algorithms • System Design</span>
           </div>
           <div class="row">
-            <span class="k">Tools</span>
-            <span class="v">HTML, CSS, JS, React (optional), Figma</span>
+            <span class="k">Interests</span>
+            <span class="v">Machine Learning • HCI • Cloud Computing</span>
           </div>
           <div class="row">
-            <span class="k">Now</span>
-            <span class="v">Learning, shipping, refining</span>
+            <span class="k">Working style</span>
+            <span class="v">Clean code • performance • accessibility • calm UI</span>
           </div>
         </div>
       </section>
@@ -131,9 +130,9 @@
               <h3>Glass Dashboard</h3>
               <span class="tag">UI</span>
             </div>
-            <p class="muted">A Windows 11 style dashboard with glass cards and smooth transitions.</p>
+            <p class="muted">Windows 11-style dashboard with glass cards and calm motion.</p>
             <div class="project__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
               <span class="sep">•</span>
               <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
             </div>
@@ -144,9 +143,9 @@
               <h3>Minimal Portfolio</h3>
               <span class="tag">Web</span>
             </div>
-            <p class="muted">A lightweight portfolio template with dark mode, accessibility, and performance.</p>
+            <p class="muted">Lightweight portfolio template with dark mode and strong UX.</p>
             <div class="project__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
               <span class="sep">•</span>
               <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
             </div>
@@ -157,9 +156,9 @@
               <h3>API Status Page</h3>
               <span class="tag">Tool</span>
             </div>
-            <p class="muted">A clean status page design with clear hierarchy and calm colors.</p>
+            <p class="muted">Clean hierarchy, readable states, and friendly design system.</p>
             <div class="project__links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Live</a>
               <span class="sep">•</span>
               <a class="link" href="#" target="_blank" rel="noreferrer">Source</a>
             </div>
@@ -211,7 +210,7 @@
       <section class="card" aria-label="Footer note">
         <div class="card__head">
           <h2>Now Playing</h2>
-          <p class="muted">A small Windows-like “widget”.</p>
+          <p class="muted">A small Windows-like widget.</p>
         </div>
 
         <div class="widget">
@@ -229,17 +228,13 @@
   </main>
 
   <footer class="footer">
-    <p class="muted">
-      © <span id="year"></span> Your Name • Built with HTML + CSS
-    </p>
+    <p class="muted">© <span id="year"></span> Your Name • Built with HTML + CSS</p>
   </footer>
 
   <script>
-    // Theme handling: system default + saved preference
     const root = document.documentElement;
     const btn = document.getElementById('themeBtn');
     const year = document.getElementById('year');
-
     year.textContent = new Date().getFullYear();
 
     const storageKey = 'theme';
@@ -248,14 +243,11 @@
     function applyTheme(mode) {
       if (mode === 'dark') root.setAttribute('data-theme', 'dark');
       else if (mode === 'light') root.setAttribute('data-theme', 'light');
-      else root.removeAttribute('data-theme'); // follow system
+      else root.removeAttribute('data-theme');
     }
-
     function currentTheme() {
       return root.getAttribute('data-theme') || 'system';
     }
-
-    // Initial
     if (saved) applyTheme(saved);
 
     btn.addEventListener('click', () => {
@@ -269,7 +261,7 @@
         applyTheme(next);
       }
       btn.classList.remove('tap');
-      void btn.offsetWidth; // restart animation
+      void btn.offsetWidth;
       btn.classList.add('tap');
     });
   </script>
