@@ -10,26 +10,17 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- FontAwesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Background Bloom Effects for Mica -->
   <div class="bg-bloom bg-bloom-1" aria-hidden="true"></div>
   <div class="bg-bloom bg-bloom-2" aria-hidden="true"></div>
 
-  <!-- Floating Navbar -->
   <nav class="navbar mica-panel" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="logo">SM<span>.</span></a>
@@ -53,9 +44,7 @@
     </div>
   </nav>
 
-  <!-- Main Content Wrapper -->
   <main class="content-wrapper">
-    <!-- Hero Section -->
     <header class="hero section" id="home">
       <div class="hero-content mica-panel">
         <div class="badge"><i class="fas fa-rocket" aria-hidden="true"></i> Welcome to my universe</div>
@@ -66,34 +55,15 @@
         </p>
 
         <div class="social-links">
-          <a
-            href="https://github.com/sinamahboobipour"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="icon-btn social-btn"
-            aria-label="GitHub"
-          ><i class="fab fa-github" aria-hidden="true"></i></a>
-
-          <a
-            href="https://linkedin.com/in/sina-mahboobipour"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="icon-btn social-btn"
-            aria-label="LinkedIn"
-          ><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-
-          <a
-            href="mailto:sinamahboobipour@yahoo.com"
-            class="icon-btn social-btn"
-            aria-label="Email"
-          ><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://github.com/sinamahboobipour" target="_blank" rel="noopener noreferrer" class="icon-btn social-btn" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/sina-mahboobipour" target="_blank" rel="noopener noreferrer" class="icon-btn social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="mailto:sinamahboobipour@yahoo.com" class="icon-btn social-btn" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
         </div>
 
         <a href="#about" class="btn primary-btn"><i class="fas fa-arrow-down" aria-hidden="true"></i> Discover My Work</a>
       </div>
     </header>
 
-    <!-- About Section -->
     <section id="about" class="section" aria-labelledby="about-title">
       <h2 id="about-title" class="section-title">About Me</h2>
       <div class="mica-panel about-card">
@@ -110,7 +80,6 @@
       </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education" class="section" aria-labelledby="education-title">
       <h2 id="education-title" class="section-title">Education</h2>
       <div class="timeline">
@@ -137,7 +106,6 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section" aria-labelledby="skills-title">
       <h2 id="skills-title" class="section-title">Technical Skills</h2>
       <div class="mica-panel skills-wrapper">
@@ -150,47 +118,80 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section" aria-labelledby="projects-title">
       <h2 id="projects-title" class="section-title">Featured Projects</h2>
       <div class="projects-grid">
-        <div class="mica-panel project-card">
+        <!-- Project 1 -->
+        <article class="mica-panel project-card">
           <div class="project-body">
             <div class="project-header">
-              <h3>Project Title 1</h3>
-              <div class="icon-btn small-icon" aria-hidden="true"><i class="fas fa-folder-open"></i></div>
+              <h3>RAG بهینه‌سازی‌شده برای زبان فارسی با رویکرد زمانی</h3>
+              <div class="icon-btn small-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
             </div>
-            <p>Description of your project. Explain the problem it solves and your specific contribution to the development process.</p>
+            <p>
+              طراحی و پیاده‌سازی سامانه Retrieval-Augmented Generation ویژه فارسی با درنظر گرفتن بُعد زمانی اسناد،
+              بهبود رتبه‌بندی نتایج بر اساس تازگی داده و افزایش دقت پاسخ در پرسش‌های زمان‌حساس.
+            </p>
             <div class="tech-stack">
               <span>Python</span>
-              <span>Django</span>
+              <span>LLM</span>
+              <span>RAG</span>
+              <span>NLP (FA)</span>
             </div>
           </div>
           <div class="project-footer">
             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
           </div>
-        </div>
+        </article>
 
-        <div class="mica-panel project-card">
+        <!-- Project 2 -->
+        <article class="mica-panel project-card">
           <div class="project-body">
             <div class="project-header">
-              <h3>Project Title 2</h3>
-              <div class="icon-btn small-icon" aria-hidden="true"><i class="fas fa-folder-open"></i></div>
+              <h3>داشبورد تیکت شرکتی (مدیریت تیکت)</h3>
+              <div class="icon-btn small-icon" aria-hidden="true"><i class="fas fa-ticket"></i></div>
             </div>
-            <p>Another awesome project. Highlight the key features, the architecture used, and what you learned from it.</p>
+            <p>
+              توسعه داشبورد عملیاتی برای مدیریت چرخه کامل تیکت‌ها شامل ایجاد، ارجاع، اولویت‌بندی، SLA، گزارش‌گیری
+              و پایش عملکرد تیم پشتیبانی در مقیاس سازمانی.
+            </p>
             <div class="tech-stack">
               <span>Java</span>
-              <span>Spring</span>
+              <span>Spring Boot</span>
+              <span>REST API</span>
+              <span>PostgreSQL</span>
             </div>
           </div>
           <div class="project-footer">
             <a href="#" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
           </div>
-        </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="mica-panel project-card">
+          <div class="project-body">
+            <div class="project-header">
+              <h3>سامانه تحلیل کیفیت کد و معماری</h3>
+              <div class="icon-btn small-icon" aria-hidden="true"><i class="fas fa-diagram-project"></i></div>
+            </div>
+            <p>
+              ابزار داخلی برای تحلیل کیفیت کد، شناسایی Code Smell، ارزیابی قواعد معماری و ارائه داشبورد بصری
+              جهت بهبود نگهداشت‌پذیری و کاهش بدهی فنی در تیم.
+            </p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>Static Analysis</span>
+              <span>CI/CD</span>
+              <span>Dashboard</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github" aria-hidden="true"></i> Source Code</a>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="mica-panel footer-card">
         <p>&copy; <span id="year"></span> Sina Mahboobipour. Crafted with <i class="fas fa-heart" style="color: #ef4444;" aria-hidden="true"></i></p>
@@ -206,10 +207,8 @@
     const navLinks = document.getElementById('nav-links');
     const yearEl = document.getElementById('year');
 
-    // Dynamic year
     yearEl.textContent = new Date().getFullYear();
 
-    // Theme init (saved preference first, else system)
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const isDarkInit = savedTheme ? savedTheme === 'dark' : prefersDark;
@@ -230,7 +229,6 @@
       document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isDark ? '#111111' : '#f3f3f3');
     });
 
-    // Mobile menu toggle
     menuBtn.addEventListener('click', () => {
       const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
       menuBtn.setAttribute('aria-expanded', String(!expanded));
@@ -240,7 +238,6 @@
         : '<i class="fas fa-bars" aria-hidden="true"></i>';
     });
 
-    // Smooth Scrolling with offset handled by CSS scroll-margin-top
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         const targetSelector = this.getAttribute('href');
@@ -249,7 +246,6 @@
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-        // close mobile menu after click
         if (navLinks.classList.contains('open')) {
           navLinks.classList.remove('open');
           menuBtn.setAttribute('aria-expanded', 'false');
