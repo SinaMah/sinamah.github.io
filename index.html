@@ -9,7 +9,7 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,19 +21,25 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">SM<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="home">
+        <div class="hero-bg-shapes"></div>
         <div class="hero-content">
-            <p class="greeting">Hello, I'm</p>
+            <span class="greeting">Welcome to my universe <i class="fas fa-rocket"></i></span>
             <h1 class="name">Sina Mahboobipour</h1>
             <h2 class="title">Software Engineer</h2>
             <p class="subtitle">Master's Student in Computer Engineering (Software) at Iran University of Science and Technology (IUST)</p>
@@ -50,7 +56,7 @@
                 </a>
             </div>
             
-            <a href="#about" class="btn primary-btn">Learn More About Me <i class="fas fa-arrow-down"></i></a>
+            <a href="#about" class="btn primary-btn">Discover My Work <i class="fas fa-arrow-down"></i></a>
         </div>
     </header>
 
@@ -59,6 +65,7 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-card">
+                <div class="about-icon"><i class="fas fa-user-astronaut"></i></div>
                 <p>
                     I am a dedicated Software Engineering Master's student at the <strong>Iran University of Science and Technology (IUST)</strong>. 
                     I have a strong passion for designing and developing robust software systems, exploring new technologies, and solving complex architectural challenges.
@@ -70,14 +77,14 @@
         </div>
     </section>
 
-    <!-- Education Section (Timeline Fixed & Upgraded) -->
-    <section id="education" class="section bg-light">
+    <!-- Education Section -->
+    <section id="education" class="section bg-alt">
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="timeline">
                 <!-- Master's Degree -->
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
                     <div class="timeline-content">
                         <span class="date">Current</span>
                         <h3>M.Sc. in Computer Engineering - Software</h3>
@@ -85,7 +92,18 @@
                         <p>Focusing on advanced software engineering methodologies, system architecture, and cutting-edge software development techniques.</p>
                     </div>
                 </div>
-                <!-- You can copy the block above for Bachelor's degree if you want to add it -->
+                
+                <!-- Bachelor's Degree -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fas fa-university"></i></div>
+                    <div class="timeline-content">
+                        <span class="date">Completed</span>
+                        <h3>B.Sc. in Computer Engineering - Software</h3>
+                        <h4>Islamic Azad University Central Tehran Branch (IAUCTB)</h4>
+                        <p>Built a strong foundation in programming, algorithms, and software design.</p>
+                        <div class="gpa-badge"><i class="fas fa-star"></i> GPA: 3.9</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -95,18 +113,18 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-wrapper">
-                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                <span class="skill-tag"><i class="fas fa-code-branch"></i> Git & GitHub</span>
-                <span class="skill-tag"><i class="fas fa-database"></i> Databases</span>
-                <span class="skill-tag"><i class="fas fa-server"></i> Software Architecture</span>
-                <span class="skill-tag"><i class="fas fa-laptop-code"></i> Web Development</span>
+                <span class="skill-tag"><i class="fab fa-python skill-icon-python"></i> Python</span>
+                <span class="skill-tag"><i class="fab fa-java skill-icon-java"></i> Java</span>
+                <span class="skill-tag"><i class="fas fa-code-branch skill-icon-git"></i> Git & GitHub</span>
+                <span class="skill-tag"><i class="fas fa-database skill-icon-db"></i> Databases</span>
+                <span class="skill-tag"><i class="fas fa-server skill-icon-arch"></i> Software Architecture</span>
+                <span class="skill-tag"><i class="fas fa-laptop-code skill-icon-web"></i> Web Development</span>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
+    <section id="projects" class="section bg-alt">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
@@ -114,7 +132,10 @@
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Project Title 1</h3>
+                        <div class="project-header">
+                            <h3>Project Title 1</h3>
+                            <i class="fas fa-folder-open folder-icon"></i>
+                        </div>
                         <p>Description of your project. Explain the problem it solves and your specific contribution to the development process.</p>
                         <div class="tech-stack">
                             <span>Python</span>
@@ -129,7 +150,10 @@
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Project Title 2</h3>
+                        <div class="project-header">
+                            <h3>Project Title 2</h3>
+                            <i class="fas fa-folder-open folder-icon"></i>
+                        </div>
                         <p>Another awesome project. Highlight the key features, the architecture used, and what you learned from it.</p>
                         <div class="tech-stack">
                             <span>Java</span>
@@ -148,12 +172,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Sina Mahboobipour. Built with <i class="fas fa-heart" style="color: #ef4444;"></i> and code.</p>
+            <p>&copy; 2024 Sina Mahboobipour. Crafted with <i class="fas fa-heart" style="color: #ef4444;"></i></p>
         </div>
     </footer>
 
-    <!-- Simple Scroll Script -->
+    <!-- Scripts -->
     <script>
+        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -161,6 +186,30 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeIcon = themeBtn.querySelector('i');
+        const body = document.body;
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
         });
     </script>
 </body>
