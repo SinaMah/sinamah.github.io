@@ -1,631 +1,167 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <title>Sina Mahboobipour — Portfolio</title>
-  <meta name="description" content="Sina Mahboobipour — Backend & data-oriented developer (C++, C#, Python, SQL Server). Docker & GitHub. Exploring Spark/Kafka and data pipelines." />
-
-  <!-- Typography -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,560,0,0" rel="stylesheet" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sina Mahboobipour | Software Engineer</title>
+    <meta name="description" content="Portfolio of Sina Mahboobipour, Master's student in Software Engineering at IUST.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <div class="brand__mark" aria-hidden="true">S</div>
-        <div>
-          <div class="brand__name">Sina Mahboobipour</div>
-          <div class="brand__tag">Backend & Data • Software Developer</div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">SM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
         </div>
-      </a>
+    </nav>
 
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#about">About</a>
-        <a class="nav__link" href="#skills">Skills</a>
-        <a class="nav__link" href="#education">Education</a>
-        <a class="nav__link" href="#projects">Projects</a>
-        <a class="nav__link" href="#contact">Contact</a>
-      </nav>
-
-      <div class="topbar__actions">
-        <button class="icon-btn state" type="button" id="themeToggle" aria-label="Toggle theme">
-          <span class="material-symbols-rounded" id="themeIcon" aria-hidden="true">dark_mode</span>
-        </button>
-
-        <button class="icon-btn icon-btn--ghost state" type="button" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-          <span class="material-symbols-rounded" aria-hidden="true">menu</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile drawer -->
-    <div class="scrim" id="scrim" hidden></div>
-    <div class="drawer" id="mobileNav" hidden role="dialog" aria-modal="true" aria-label="Mobile menu">
-      <div class="drawer__head">
-        <div class="drawer__title">Navigation</div>
-        <button class="icon-btn" type="button" id="closeMenu" aria-label="Close menu">
-          <span class="material-symbols-rounded" aria-hidden="true">close</span>
-        </button>
-      </div>
-
-      <div class="drawer__content">
-        <a class="drawer__link" href="#about">
-          <span class="material-symbols-rounded" aria-hidden="true">person</span>
-          <span>About</span>
-        </a>
-
-        <a class="drawer__link" href="#skills">
-          <span class="material-symbols-rounded" aria-hidden="true">code</span>
-          <span>Skills</span>
-        </a>
-
-        <a class="drawer__link" href="#education">
-          <span class="material-symbols-rounded" aria-hidden="true">school</span>
-          <span>Education</span>
-        </a>
-
-        <a class="drawer__link" href="#projects">
-          <span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span>
-          <span>Projects</span>
-        </a>
-
-        <a class="drawer__link" href="#contact">
-          <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
-          <span>Contact</span>
-        </a>
-
-        <div class="drawer__divider" role="separator" aria-hidden="true"></div>
-
-        <div class="drawer__hint">
-          Tip: Replace the placeholder links with your real GitHub/LinkedIn/Email.
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <p class="greeting">Hello, I'm</p>
+            <h1 class="name">Sina Mahboobipour</h1>
+            <h2 class="title">Software Engineer</h2>
+            <p class="subtitle">Master's Student in Computer Engineering (Software) at Iran University of Science and Technology (IUST)</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/sinamahboobipour" target="_blank" aria-label="GitHub" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/sina-mahboobipour" target="_blank" aria-label="LinkedIn" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="mailto:sinamahboobipour@yahoo.com" aria-label="Email" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <a href="#about" class="btn primary-btn">Learn More About Me <i class="fas fa-arrow-down"></i></a>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <div class="pill" role="note">
-            <span class="material-symbols-rounded" aria-hidden="true">school</span>
-            <span>Computer Science • Backend & Data</span>
-          </div>
-
-          <h1 class="hero__title">
-            Hi, I’m <span class="text-gradient">Sina</span>.
-          </h1>
-
-          <p class="hero__subtitle">
-            Backend & data-oriented developer with a strong foundation in <strong>C++, C#, Python, and SQL Server</strong>.
-            Comfortable with GitHub & Docker, exploring Spark/Kafka and data pipelines.
-          </p>
-
-          <div class="hero__cta">
-            <a class="btn btn--filled" href="#contact">
-              <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-              Contact
-            </a>
-            <a class="btn btn--tonal" href="#projects">
-              <span class="material-symbols-rounded" aria-hidden="true">rocket_launch</span>
-              View Projects
-            </a>
-            <a class="btn btn--outlined" href="#about">
-              <span class="material-symbols-rounded" aria-hidden="true">person</span>
-              About Me
-            </a>
-          </div>
-
-          <div class="chips" aria-label="Highlights">
-            <span class="chip">C++ / C#</span>
-            <span class="chip">Python</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">Docker • GitHub</span>
-            <span class="chip">Kafka/Spark (basic)</span>
-          </div>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
+                <p>
+                    I am a dedicated Software Engineering Master's student at the <strong>Iran University of Science and Technology (IUST)</strong>. 
+                    I have a strong passion for designing and developing robust software systems, exploring new technologies, and solving complex architectural challenges.
+                </p>
+                <p>
+                    My academic journey and personal projects reflect my commitment to writing clean, maintainable code and my continuous drive to grow as a professional software engineer.
+                </p>
+            </div>
         </div>
-
-        <aside class="hero__card" aria-label="Profile card">
-          <div class="profile">
-            <div class="avatar" aria-hidden="true">
-              <span class="material-symbols-rounded">person</span>
-            </div>
-
-            <div class="profile__meta">
-              <div class="profile__name">Sina</div>
-              <div class="profile__role">Computer Science</div>
-              <div class="profile__org">Backend & Data Development</div>
-            </div>
-
-            <div class="profile__stats" role="list">
-              <div class="stat" role="listitem">
-                <div class="stat__num">C++ / C#</div>
-                <div class="stat__label">Core</div>
-              </div>
-              <div class="stat" role="listitem">
-                <div class="stat__num">Python</div>
-                <div class="stat__label">Scripting</div>
-              </div>
-              <div class="stat" role="listitem">
-                <div class="stat__num">SQL Server</div>
-                <div class="stat__label">Database</div>
-              </div>
-            </div>
-
-            <div class="profile__links">
-              <a class="icon-link" href="#" aria-label="GitHub">
-                <span class="material-symbols-rounded" aria-hidden="true">code</span>
-              </a>
-              <a class="icon-link" href="#" aria-label="LinkedIn">
-                <span class="material-symbols-rounded" aria-hidden="true">work</span>
-              </a>
-              <a class="icon-link" href="#" aria-label="Email">
-                <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
-              </a>
-            </div>
-
-            <div class="divider" role="separator" aria-hidden="true"></div>
-
-            <div class="profile__note">
-              <span class="material-symbols-rounded" aria-hidden="true">tips_and_updates</span>
-              <span>Tip: Update your links and replace project cards with real repositories.</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="hero__bg" aria-hidden="true"></div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">About</h2>
-          <p class="section__desc">
-            Focused on building reliable backend software, database-driven applications, and practical data engineering.
-          </p>
+    <!-- Education Section (Timeline Fixed & Upgraded) -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <!-- Master's Degree -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Current</span>
+                        <h3>M.Sc. in Computer Engineering - Software</h3>
+                        <h4>Iran University of Science and Technology (IUST)</h4>
+                        <p>Focusing on advanced software engineering methodologies, system architecture, and cutting-edge software development techniques.</p>
+                    </div>
+                </div>
+                <!-- You can copy the block above for Bachelor's degree if you want to add it -->
+            </div>
         </div>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">interests</span>
-              <h3>What I do</h3>
-            </div>
-            <p class="card__text">
-              I build maintainable backend software and data-driven systems.
-              I care about clean architecture, performance, and developer experience.
-            </p>
-
-            <div class="list">
-              <div class="list__item">
-                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                <span>Strong foundation in C++, C#, Python, and SQL Server</span>
-              </div>
-              <div class="list__item">
-                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                <span>Comfortable with Git/GitHub workflows and Docker for reproducible development</span>
-              </div>
-              <div class="list__item">
-                <span class="material-symbols-rounded" aria-hidden="true">check_circle</span>
-                <span>Exploring data engineering: Spark, Kafka, and building data pipelines</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card--surface-variant">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">emoji_objects</span>
-              <h3>Highlights</h3>
-            </div>
-
-            <div class="kv">
-              <div class="kv__row">
-                <div class="kv__k">Focus</div>
-                <div class="kv__v">Backend + Databases + Data pipelines</div>
-              </div>
-              <div class="kv__row">
-                <div class="kv__k">Core</div>
-                <div class="kv__v">C++ • C# • Python • SQL Server</div>
-              </div>
-              <div class="kv__row">
-                <div class="kv__k">Tooling</div>
-                <div class="kv__v">GitHub • Docker • VS Code</div>
-              </div>
-            </div>
-
-            <div class="inline-actions">
-              <a class="btn btn--tonal btn--sm" href="#projects">
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-                See Projects
-              </a>
-              <a class="btn btn--outlined btn--sm" href="#contact">
-                <span class="material-symbols-rounded" aria-hidden="true">send</span>
-                Get in touch
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">Skills</h2>
-          <p class="section__desc">A quick snapshot of the technologies I’m most comfortable with.</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                <span class="skill-tag"><i class="fas fa-code-branch"></i> Git & GitHub</span>
+                <span class="skill-tag"><i class="fas fa-database"></i> Databases</span>
+                <span class="skill-tag"><i class="fas fa-server"></i> Software Architecture</span>
+                <span class="skill-tag"><i class="fas fa-laptop-code"></i> Web Development</span>
+            </div>
         </div>
-
-        <div class="grid grid--3">
-          <article class="card">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">code</span>
-              <h3>Programming</h3>
-            </div>
-            <p class="card__text">Efficient, readable code with attention to correctness and performance.</p>
-            <div class="chips" aria-label="Programming skills">
-              <span class="chip chip--small">C++</span>
-              <span class="chip chip--small">C#</span>
-              <span class="chip chip--small">Python</span>
-              <span class="chip chip--small">SQL</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">construction</span>
-              <h3>Tools</h3>
-            </div>
-            <p class="card__text">A clean workflow for versioning, collaboration, and reproducible builds.</p>
-            <div class="chips" aria-label="Tools">
-              <span class="chip chip--small">Git</span>
-              <span class="chip chip--small">GitHub</span>
-              <span class="chip chip--small">Docker</span>
-              <span class="chip chip--small">VS Code</span>
-            </div>
-          </article>
-
-          <article class="card card--surface-variant">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">hub</span>
-              <h3>Data & Backend</h3>
-            </div>
-            <p class="card__text">Relational databases + growing experience in data pipelines and streaming.</p>
-            <div class="chips" aria-label="Data & backend">
-              <span class="chip chip--small">SQL Server</span>
-              <span class="chip chip--small">REST APIs</span>
-              <span class="chip chip--small">Kafka (basic)</span>
-              <span class="chip chip--small">Spark (basic)</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="callout" style="margin-top: 1.2rem;">
-          <span class="material-symbols-rounded" aria-hidden="true">verified</span>
-          <div>
-            <div class="callout__title">What I value</div>
-            <div class="callout__text">Clean architecture, performance where it matters, and documentation that makes the next step obvious.</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- EDUCATION (TIMELINE) -->
-    <section class="section" id="education">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">Education</h2>
-          <p class="section__desc">Timeline of my academic background.</p>
-        </div>
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Title 1</h3>
+                        <p>Description of your project. Explain the problem it solves and your specific contribution to the development process.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
 
-        <div class="timeline">
-          <!-- MSc -->
-          <article class="card timeline__item">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content">
-              <div class="timeline__top">
-                <h3 class="timeline__title">M.Sc. Computer Science</h3>
-                <span class="badge">Current</span>
-              </div>
-              <div class="timeline__meta">
-                Iran University of Science and Technology • <span class="muted">Tehran, Iran</span> • <strong>—</strong>
-              </div>
-              <p class="timeline__text">Focus: Backend systems, databases, and data-oriented development.</p>
-            </div>
-          </article>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Title 2</h3>
+                        <p>Another awesome project. Highlight the key features, the architecture used, and what you learned from it.</p>
+                        <div class="tech-stack">
+                            <span>Java</span>
+                            <span>Spring</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#" target="_blank" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
 
-          <!-- BSc -->
-          <article class="card timeline__item">
-            <div class="timeline__dot" aria-hidden="true"></div>
-            <div class="timeline__content">
-              <div class="timeline__top">
-                <h3 class="timeline__title">B.Sc. Computer Engineering</h3>
-                <span class="badge badge--tonal">2019 – 2023</span>
-              </div>
-              <div class="timeline__meta">
-                Islamic Azad University (IAU) • <span class="muted">Iran</span> • <strong>GPA 3.9</strong>
-              </div>
-              <p class="timeline__text">Highlights: Strong fundamentals in software engineering, programming, and databases.</p>
             </div>
-          </article>
         </div>
-      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">Projects</h2>
-          <p class="section__desc">Selected work — replace titles and links with your real repositories.</p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sina Mahboobipour. Built with <i class="fas fa-heart" style="color: #ef4444;"></i> and code.</p>
         </div>
+    </footer>
 
-        <div class="grid grid--3">
-          <article class="card project">
-            <div class="project__top">
-              <h3 class="project__title">Project Name</h3>
-              <span class="badge badge--tonal">Backend</span>
-            </div>
-            <p class="project__desc">One sentence: what it does and why it matters.</p>
-            <div class="project__tags">
-              <span class="chip chip--small">C#</span>
-              <span class="chip chip--small">SQL Server</span>
-              <span class="chip chip--small">Docker</span>
-            </div>
-            <div class="project__actions">
-              <a class="btn btn--outlined btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">code</span>
-                Code
-              </a>
-              <a class="btn btn--tonal btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
-                Demo
-              </a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <div class="project__top">
-              <h3 class="project__title">Project Name</h3>
-              <span class="badge">C++</span>
-            </div>
-            <p class="project__desc">One sentence: what you built, key features, or outcome.</p>
-            <div class="project__tags">
-              <span class="chip chip--small">C++</span>
-              <span class="chip chip--small">Performance</span>
-              <span class="chip chip--small">GitHub</span>
-            </div>
-            <div class="project__actions">
-              <a class="btn btn--outlined btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">code</span>
-                Code
-              </a>
-              <a class="btn btn--tonal btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
-                Notes
-              </a>
-            </div>
-          </article>
-
-          <article class="card project">
-            <div class="project__top">
-              <h3 class="project__title">Project Name</h3>
-              <span class="badge badge--tonal">Data</span>
-            </div>
-            <p class="project__desc">One sentence: pipeline / ingestion / streaming project idea.</p>
-            <div class="project__tags">
-              <span class="chip chip--small">Kafka</span>
-              <span class="chip chip--small">Spark</span>
-              <span class="chip chip--small">Pipelines</span>
-            </div>
-            <div class="project__actions">
-              <a class="btn btn--outlined btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">code</span>
-                Code
-              </a>
-              <a class="btn btn--tonal btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>
-                Notes
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="section__title">Contact</h2>
-          <p class="section__desc">The fastest way to reach me.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">alternate_email</span>
-              <h3>Say hello</h3>
-            </div>
-
-            <p class="card__text">Replace the links below with your real contact details.</p>
-
-            <div class="list">
-              <a class="list__link" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-                <span>Email</span>
-                <span class="spacer" aria-hidden="true"></span>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-              </a>
-              <a class="list__link" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">code</span>
-                <span>GitHub</span>
-                <span class="spacer" aria-hidden="true"></span>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-              </a>
-              <a class="list__link" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">work</span>
-                <span>LinkedIn</span>
-                <span class="spacer" aria-hidden="true"></span>
-                <span class="material-symbols-rounded" aria-hidden="true">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="card card--surface-variant">
-            <div class="card__title">
-              <span class="material-symbols-rounded" aria-hidden="true">design_services</span>
-              <h3>Availability</h3>
-            </div>
-            <p class="card__text">Open to backend and data-related projects.</p>
-
-            <div class="kv">
-              <div class="kv__row">
-                <div class="kv__k">Open to</div>
-                <div class="kv__v">Backend / Data projects</div>
-              </div>
-              <div class="kv__row">
-                <div class="kv__k">Timezone</div>
-                <div class="kv__v">Asia/Tehran</div>
-              </div>
-            </div>
-
-            <div class="inline-actions">
-              <a class="btn btn--filled btn--sm" href="#">
-                <span class="material-symbols-rounded" aria-hidden="true">mail</span>
-                Email me
-              </a>
-              <a class="btn btn--outlined btn--sm" href="#top">
-                <span class="material-symbols-rounded" aria-hidden="true">north</span>
-                Back to top
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__left">
-        <span class="material-symbols-rounded" aria-hidden="true">copyright</span>
-        <span><span id="year"></span> Sina • All rights reserved</span>
-      </div>
-
-      <a class="footer__top state" href="#top">
-        <span class="material-symbols-rounded" aria-hidden="true">north</span>
-        Back to top
-      </a>
-    </div>
-  </footer>
-
-  <script>
-    (() => {
-      const root = document.documentElement;
-      const themeToggle = document.getElementById("themeToggle");
-      const themeIcon = document.getElementById("themeIcon");
-      const year = document.getElementById("year");
-
-      year.textContent = new Date().getFullYear();
-
-      const menuBtn = document.getElementById("menuBtn");
-      const closeMenu = document.getElementById("closeMenu");
-      const drawer = document.getElementById("mobileNav");
-      const scrim = document.getElementById("scrim");
-
-      // --- Theme ---
-      const saved = localStorage.getItem("theme");
-      if (saved === "dark") root.setAttribute("data-theme", "dark");
-      if (saved === "light") root.setAttribute("data-theme", "light");
-
-      function currentTheme() {
-        return root.getAttribute("data-theme") || "system";
-      }
-      function nextTheme() {
-        const t = currentTheme();
-        if (t === "system") return "dark";
-        if (t === "dark") return "light";
-        return "system";
-      }
-      function applyTheme(t) {
-        if (t === "system") {
-          root.removeAttribute("data-theme");
-          localStorage.removeItem("theme");
-        } else {
-          root.setAttribute("data-theme", t);
-          localStorage.setItem("theme", t);
-        }
-        updateThemeIcon();
-      }
-      function updateThemeIcon() {
-        const t = currentTheme();
-        if (t === "dark") themeIcon.textContent = "dark_mode";
-        else if (t === "light") themeIcon.textContent = "light_mode";
-        else {
-          const sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-          themeIcon.textContent = sysDark ? "dark_mode" : "light_mode";
-        }
-      }
-      updateThemeIcon();
-      themeToggle.addEventListener("click", () => applyTheme(nextTheme()));
-
-      // --- Drawer ---
-      function openDrawer() {
-        drawer.hidden = false;
-        scrim.hidden = false;
-        requestAnimationFrame(() => {
-          drawer.classList.add("drawer--open");
-          scrim.classList.add("scrim--show");
+    <!-- Simple Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-        menuBtn.setAttribute("aria-expanded", "true");
-        const first = drawer.querySelector("a");
-        first && first.focus();
-      }
-      function closeDrawerFn() {
-        drawer.classList.remove("drawer--open");
-        scrim.classList.remove("scrim--show");
-        menuBtn.setAttribute("aria-expanded", "false");
-        setTimeout(() => {
-          drawer.hidden = true;
-          scrim.hidden = true;
-        }, 180);
-        menuBtn.focus();
-      }
-
-      menuBtn.addEventListener("click", () => {
-        const expanded = menuBtn.getAttribute("aria-expanded") === "true";
-        expanded ? closeDrawerFn() : openDrawer();
-      });
-      closeMenu.addEventListener("click", closeDrawerFn);
-      scrim.addEventListener("click", closeDrawerFn);
-
-      drawer.addEventListener("click", (e) => {
-        const a = e.target.closest("a");
-        if (a) closeDrawerFn();
-      });
-
-      window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && !drawer.hidden) closeDrawerFn();
-      });
-    })();
-  </script>
+    </script>
 </body>
 </html>
