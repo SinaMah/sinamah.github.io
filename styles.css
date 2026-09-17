@@ -2,6 +2,7 @@
    DESIGN TOKENS
    ========================================================================== */
 :root {
+  color-scheme: light;
   /* Surfaces */
   --bg: #f6f4ef;
   --bg-tint: #eeebe3;
@@ -112,9 +113,13 @@ body.dark {
    BASE
    ========================================================================== */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
 
 body {
+  position: relative;
   margin: 0;
   min-height: 100vh;
   color: var(--text);
@@ -134,10 +139,31 @@ body {
   transition: background-color .4s ease, color .4s ease;
 }
 
-::selection { background: rgba(79, 70, 229, 0.24); }
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
 a { color: inherit; }
-button { font: inherit; }
-img, svg { display: block; max-width: 100%; }
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
 
 /* Display font */
 .hero h1,
@@ -230,19 +256,19 @@ a:focus-visible, button:focus-visible {
    ATMOSPHERE
    ========================================================================== */
 .page-noise {
-  position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
   opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 }
 .ambient {
-  position: fixed; z-index: -3; border-radius: 999px;
+  position: fixed; z-index: 0; border-radius: 999px;
   filter: blur(110px); pointer-events: none;
 }
 .ambient-a { width: 52vw; height: 52vw; left: -22vw; top: -24vw; background: radial-gradient(circle, var(--accent-glow), transparent 70%); opacity: 0.85; }
 .ambient-b { width: 46vw; height: 46vw; right: -20vw; bottom: -22vw; background: radial-gradient(circle, var(--cyan-glow), transparent 70%); opacity: 0.8; }
 
 .grid-field {
-  position: fixed; inset: 0; z-index: -4; opacity: .03; pointer-events: none;
+  position: fixed; inset: 0; z-index: 0; opacity: .03; pointer-events: none;
   background-image:
     linear-gradient(to right, rgba(87, 83, 78, 0.8) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(87, 83, 78, 0.8) 1px, transparent 1px);
@@ -535,7 +561,16 @@ body.dark .icon-sun { display: none; }
   width: min(var(--max-prose), calc(100% - 40px));
   margin-inline: auto;
 }
-main { position: relative; z-index: 2; }
+main,
+.site-footer,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  z-index: 2;
+}
 
 /* ==========================================================================
    ★ SECTION RHYTHM — varied padding, accent variant, big faded index
@@ -714,6 +749,7 @@ body.dark .surface:hover {
    ========================================================================== */
 .hero {
   position: relative;
+  isolation: isolate;
   min-height: 100svh;
   display: grid;
   grid-template-columns: minmax(0, 1.34fr) minmax(320px, 0.66fr);
@@ -797,45 +833,47 @@ body.dark .hero h1 .period {
 }
 
 /* ==========================================================================
-   ★ HERO NAME — "written in" animation
-   Each letter is wrapped in a .char span by JS, which sets --char-index
-   on each one and --char-total on the h1. Cursor appears after the last char.
+   HERO NAME — CSS-only left-to-right reveal
+   Works with plain text and remains safe if an existing JS script still
+   wraps characters in .char spans.
    ========================================================================== */
-.hero h1 .char {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(0.4em) scale(0.94);
-  filter: blur(6px);
-  animation: hero-char-in 520ms cubic-bezier(.22, 1, .36, 1) forwards;
-  animation-delay: calc(var(--char-index, 0) * 55ms + 200ms);
-  will-change: opacity, transform, filter;
+.hero h1 {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0.01;
+  transform: translate3d(-10px, 0, 0);
+  animation: hero-name-reveal 1.15s var(--ease-out) 180ms both;
+  will-change: clip-path, opacity, transform;
 }
 
-@keyframes hero-char-in {
+@keyframes hero-name-reveal {
   0% {
-    opacity: 0;
-    transform: translateY(0.4em) scale(0.94);
-    filter: blur(6px);
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.01;
+    transform: translate3d(-10px, 0, 0);
   }
-  60% {
-    filter: blur(0);
+  58% {
+    opacity: 1;
+    transform: translate3d(2px, 0, 0);
   }
   100% {
+    clip-path: inset(0 0 0 0);
     opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-/* Keep the gradient working on the trailing period after it's split into chars */
-.hero h1 .period .char {
-  background: inherit;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Compatibility with an older JS character-splitting script:
+   the reveal is now owned by the h1, not by each character. */
+.hero h1 .char {
+  display: inline;
+  opacity: 1;
+  transform: none;
+  filter: none;
+  animation: none;
+  will-change: auto;
 }
 
-/* Blinking cursor after the last character */
+/* Optional caret: its timing is independent of JS variables. */
 .hero h1 .type-cursor {
   display: inline-block;
   width: 0.07em;
@@ -845,24 +883,12 @@ body.dark .hero h1 .period {
   background: currentColor;
   border-radius: 1px;
   opacity: 0;
-  animation: hero-cursor-blink 1.05s linear infinite;
-  animation-delay: calc(var(--char-total, 20) * 55ms + 700ms);
+  animation: hero-cursor-blink 1.05s linear 1.34s infinite;
 }
 
 @keyframes hero-cursor-blink {
   0%, 50%   { opacity: 1; }
   51%, 100% { opacity: 0; }
-}
-
-/* Reduced-motion: render everything instantly, hide the cursor */
-@media (prefers-reduced-motion: reduce) {
-  .hero h1 .char {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-    animation: none !important;
-  }
-  .hero h1 .type-cursor { display: none; }
 }
 
 .hero-role {
@@ -1604,7 +1630,10 @@ body.dark .hero h1 .period {
   color: var(--muted);
   transition: color var(--transition), background-color var(--transition);
 }
-.copy-email:hover .copy-email-icon { color: var(--accent); background: white; }
+.copy-email:hover .copy-email-icon {
+  color: var(--accent);
+  background: var(--surface-soft);
+}
 .copy-email .icon { width: 13px; height: 13px; }
 .copy-email.copied .copy-email-icon { color: var(--success); }
 .copy-email.copied .copy-email-icon::after {
@@ -2219,6 +2248,69 @@ body.dark .hero h1 .period {
 .stack > * + * { margin-top: var(--sp-3); }
 
 /* ==========================================================================
+   RESEARCH / PORTFOLIO POLISH
+   ========================================================================== */
+
+/* Make selection and keyboard interaction feel consistent with the system. */
+::selection {
+  background: color-mix(in srgb, var(--accent) 20%, transparent);
+  color: var(--text);
+}
+
+/* Prevent long paper titles, repository URLs, and dataset names from
+   overflowing narrow cards. */
+.publication-body h3,
+.publication-body p,
+.project-content h3,
+.project-content p,
+.cv-row-main h3,
+.cv-row-main p,
+.blog-card h3,
+.blog-card p,
+.now-card h3,
+.now-card p {
+  overflow-wrap: anywhere;
+}
+
+/* Keep code/data-heavy interfaces visually crisp. */
+.visual-code,
+.publication-year,
+.project-year,
+.experience-date span,
+.cv-row-date,
+.blog-meta,
+.now-meta,
+.kbd {
+  font-variant-numeric: tabular-nums;
+}
+
+/* More deliberate active/pressed feedback. */
+.button:active,
+.nav-cta:active,
+.icon-button:active,
+.social-link:active,
+.copy-email:active,
+.cmd-trigger:active {
+  transform: translateY(1px);
+}
+
+/* On touch devices, avoid sticky hover lifts after tapping. */
+@media (hover: none) {
+  .surface:hover {
+    transform: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.75),
+      var(--shadow-1);
+  }
+
+  body.dark .surface:hover {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.04),
+      var(--shadow-1);
+  }
+}
+
+/* ==========================================================================
    FALLBACKS
    ========================================================================== */
 @supports not (color: color-mix(in srgb, white, black)) {
@@ -2312,20 +2404,44 @@ body.dark .hero h1 .period {
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal { opacity: 1 !important; transform: none !important; }
+
+  .hero h1 {
+    clip-path: inset(0 0 0 0) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .hero h1 .type-cursor {
+    display: none !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .surface:hover,
   .button:hover,
   .icon-button:hover,
   .experience-item:hover .experience-arrow,
   .text-link:hover .icon,
   .panel-link:hover .icon,
-  .publication-row:hover > .icon { transform: none !important; }
-  .project:hover .project-visual > * { transform: none !important; }
+  .publication-row:hover > .icon {
+    transform: none !important;
+  }
+
+  .project:hover .project-visual > * {
+    transform: none !important;
+  }
 }
 
 /* ==========================================================================
