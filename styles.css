@@ -1,57 +1,35 @@
-/* ==========================================================================
-   MSc Portfolio — Design System
-   Palette: indigo / cyan / teal with a pink + amber signal layer
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   1. Tokens
-   -------------------------------------------------------------------------- */
 :root {
   color-scheme: light;
-
-  /* Surfaces */
-  --bg: #f4f6fc;
-  --bg-tint: #eaeef8;
+  --bg: #f6f7fc;
+  --bg-tint: #eceff8;
   --surface: #ffffff;
-  --surface-soft: #eef1f9;
-  --surface-tint: #f7f9ff;
-  --ink-surface: #0a0f1e;
-
-  /* Text */
-  --text: #0d1322;
-  --text-soft: #38425a;
-  --muted: #64708a;
-  --muted-2: #96a0b6;
+  --surface-soft: #f2f4fb;
+  --surface-tint: #fafbff;
+  --ink-surface: #080c18;
+  --text: #0b1220;
+  --text-soft: #333c54;
+  --muted: #5f6a83;
+  --muted-2: #8f99b1;
   --text-on-accent: #ffffff;
-
-  /* Lines */
-  --border: rgba(13, 19, 34, .085);
-  --border-strong: rgba(13, 19, 34, .14);
+  --border: rgba(11, 18, 32, .085);
+  --border-strong: rgba(11, 18, 32, .14);
   --border-on-accent: rgba(255, 255, 255, .18);
-
-  /* Brand */
-  --accent: #4f46e5;
+  --accent: #5b4ee6;
   --accent-2: #0ea5e9;
-  --accent-3: #14b8a6;
+  --accent-3: #10b981;
   --accent-4: #ec4899;
   --accent-5: #f59e0b;
-  --accent-soft: rgba(79, 70, 229, .085);
-  --accent-border: rgba(79, 70, 229, .24);
-  --accent-glow: rgba(79, 70, 229, .22);
+  --accent-soft: rgba(91, 78, 230, .085);
+  --accent-border: rgba(91, 78, 230, .24);
+  --accent-glow: rgba(91, 78, 230, .22);
   --cyan-glow: rgba(14, 165, 233, .14);
   --success: #059669;
-  --success-soft: rgba(5, 150, 105, .16);
-
-  /* Elevation */
-  --shadow-1: 0 1px 2px rgba(13, 19, 34, .04), 0 8px 24px -18px rgba(13, 19, 34, .18);
-  --shadow-2: 0 2px 6px rgba(13, 19, 34, .045), 0 18px 44px -26px rgba(13, 19, 34, .24);
-  --shadow-3: 0 6px 16px rgba(13, 19, 34, .05), 0 32px 72px -36px rgba(13, 19, 34, .30);
-  --shadow-nav: 0 16px 44px -26px rgba(13, 19, 34, .30), 0 1px 2px rgba(13, 19, 34, .05);
-
-  /* Focus */
-  --ring: 0 0 0 1px rgba(79, 70, 229, .18), 0 0 0 5px rgba(79, 70, 229, .10);
-
-  /* Geometry */
+  --success-soft: rgba(5, 150, 105, .18);
+  --shadow-1: 0 1px 2px rgba(11, 18, 32, .04), 0 8px 24px -18px rgba(11, 18, 32, .18);
+  --shadow-2: 0 2px 6px rgba(11, 18, 32, .045), 0 18px 44px -26px rgba(11, 18, 32, .24);
+  --shadow-3: 0 6px 16px rgba(11, 18, 32, .05), 0 32px 72px -36px rgba(11, 18, 32, .30);
+  --shadow-nav: 0 16px 44px -26px rgba(11, 18, 32, .30), 0 1px 2px rgba(11, 18, 32, .05);
+  --ring: 0 0 0 1px rgba(91, 78, 230, .18), 0 0 0 5px rgba(91, 78, 230, .10);
   --radius-xl: 26px;
   --radius-lg: 18px;
   --radius-md: 13px;
@@ -59,8 +37,6 @@
   --max: 1180px;
   --max-prose: 720px;
   --header-h: 74px;
-
-  /* Spacing scale */
   --sp-0: .25rem;
   --sp-1: clamp(.5rem, .4rem + .18vw, .7rem);
   --sp-2: clamp(.75rem, .65rem + .24vw, .95rem);
@@ -70,20 +46,14 @@
   --sp-6: clamp(2.35rem, 1.9rem + 1.35vw, 3.35rem);
   --sp-7: clamp(2.9rem, 2.35rem + 1.5vw, 3.95rem);
   --sp-8: clamp(3.9rem, 3rem + 2vw, 5.1rem);
-
-  /* Motion */
   --ease: cubic-bezier(.22, 1, .36, 1);
   --ease-out: cubic-bezier(.16, 1, .3, 1);
   --transition: .22s var(--ease);
-
-  /* Type */
   --font-display: "Instrument Serif", "Times New Roman", serif;
   --font-sans: "Inter Tight", Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
-
-  /* Inverted (contact) block */
-  --contact-bg: #080d1c;
-  --contact-bg-2: #141c38;
+  --contact-bg: #080c18;
+  --contact-bg-2: #131c34;
   --contact-bg-3: #0a1024;
   --contact-text: #f2f5ff;
   --contact-muted: rgba(228, 235, 255, .70);
@@ -92,41 +62,36 @@
   --contact-border-strong: rgba(255, 255, 255, .18);
   --contact-surface: rgba(255, 255, 255, .05);
   --contact-surface-2: rgba(255, 255, 255, .09);
-  --contact-glow-1: rgba(79, 70, 229, .34);
+  --contact-glow-1: rgba(91, 78, 230, .34);
   --contact-glow-2: rgba(14, 165, 233, .24);
-  --contact-glow-3: rgba(20, 184, 166, .18);
+  --contact-glow-3: rgba(16, 185, 129, .18);
   --contact-edge: rgba(255, 255, 255, .30);
   --contact-shadow: 0 40px 92px -42px rgba(6, 10, 22, .92), 0 10px 26px -16px rgba(6, 10, 22, .55);
   --contact-inset: inset 0 1px 0 rgba(255, 255, 255, .10);
-
-  /* Nav */
   --nav-bg: #ffffff;
   --nav-bg-tint: #f7f9ff;
-  --nav-border-1: rgba(79, 70, 229, .58);
+  --nav-border-1: rgba(91, 78, 230, .58);
   --nav-border-2: rgba(14, 165, 233, .40);
-  --nav-border-3: rgba(20, 184, 166, .44);
+  --nav-border-3: rgba(16, 185, 129, .44);
   --nav-border-4: rgba(236, 72, 153, .34);
-  --nav-inner-glow: rgba(79, 70, 229, .10);
+  --nav-inner-glow: rgba(91, 78, 230, .10);
   --nav-inner-glow-2: rgba(14, 165, 233, .08);
-  --nav-inner-glow-3: rgba(20, 184, 166, .06);
-  --nav-scrolled-glow: rgba(79, 70, 229, .34);
+  --nav-inner-glow-3: rgba(16, 185, 129, .06);
+  --nav-scrolled-glow: rgba(91, 78, 230, .34);
 }
 
 body.dark {
   color-scheme: dark;
-
-  --bg: #070a14;
-  --bg-tint: #0c111f;
-  --surface: #0f1526;
-  --surface-soft: #151d32;
-  --surface-tint: #0b1220;
+  --bg: #060912;
+  --bg-tint: #0b1020;
+  --surface: #0e1424;
+  --surface-soft: #141c30;
+  --surface-tint: #0a1020;
   --ink-surface: #eef2ff;
-
   --text: #eef3ff;
   --text-soft: #cfd8ea;
   --muted: #93a0b8;
   --muted-2: #6a768c;
-
   --accent: #8b87ff;
   --accent-2: #38bdf8;
   --accent-3: #2dd4bf;
@@ -138,16 +103,13 @@ body.dark {
   --cyan-glow: rgba(56, 189, 248, .16);
   --success: #34d399;
   --success-soft: rgba(52, 211, 153, .18);
-
   --border: rgba(238, 242, 255, .08);
   --border-strong: rgba(238, 242, 255, .15);
-
   --shadow-1: 0 1px 2px rgba(0, 0, 0, .34), 0 10px 26px -18px rgba(0, 0, 0, .58);
   --shadow-2: 0 2px 6px rgba(0, 0, 0, .38), 0 22px 48px -24px rgba(0, 0, 0, .68);
   --shadow-3: 0 6px 14px rgba(0, 0, 0, .42), 0 34px 76px -34px rgba(0, 0, 0, .80);
   --shadow-nav: 0 22px 52px -26px rgba(0, 0, 0, .84), 0 1px 2px rgba(0, 0, 0, .5);
   --ring: 0 0 0 1px rgba(139, 135, 255, .24), 0 0 0 5px rgba(139, 135, 255, .12);
-
   --contact-bg: #0a1020;
   --contact-bg-2: #161f3e;
   --contact-bg-3: #090f1e;
@@ -163,7 +125,6 @@ body.dark {
   --contact-glow-3: rgba(45, 212, 191, .20);
   --contact-shadow: 0 46px 104px -42px rgba(0, 0, 0, .94), 0 12px 30px -18px rgba(0, 0, 0, .64);
   --contact-inset: inset 0 1px 0 rgba(255, 255, 255, .12);
-
   --nav-bg: #0d1424;
   --nav-bg-tint: #0b1220;
   --nav-border-1: rgba(139, 135, 255, .70);
@@ -176,9 +137,6 @@ body.dark {
   --nav-scrolled-glow: rgba(139, 135, 255, .50);
 }
 
-/* --------------------------------------------------------------------------
-   2. Base
-   -------------------------------------------------------------------------- */
 * { box-sizing: border-box; }
 
 html {
@@ -195,7 +153,7 @@ body {
     radial-gradient(900px 520px at 88% -10%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 68%),
     radial-gradient(760px 460px at -6% 8%, color-mix(in srgb, var(--accent-2) 9%, transparent), transparent 72%),
     radial-gradient(760px 520px at 52% 112%, color-mix(in srgb, var(--accent-3) 7%, transparent), transparent 74%),
-    linear-gradient(180deg, #fafbff 0%, var(--bg) 46%, #eef2fa 100%);
+    linear-gradient(180deg, #fafbff 0%, var(--bg) 46%, #eef1f9 100%);
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.65;
@@ -226,10 +184,8 @@ body.dark {
 }
 
 a { color: inherit; }
-
 button, input, textarea, select { font: inherit; }
 button { color: inherit; }
-
 img, svg, video, canvas { display: block; max-width: 100%; }
 
 :is(p, h1, h2, h3, h4, h5, h6, a, span, li, dt, dd, button) {
@@ -260,9 +216,6 @@ button,
   touch-action: manipulation;
 }
 
-/* --------------------------------------------------------------------------
-   3. Type roles
-   -------------------------------------------------------------------------- */
 .hero h1, .section-heading h2, .about-main h3, .education-card h3, .research-card h3,
 .project-content h3, .experience-main h3, .contact-copy h2, .avatar-name,
 .academic-stat strong, .page-title, .case-title, .cv-section h2, .blog-card h3, .now-card h3 {
@@ -285,9 +238,6 @@ button,
 .avatar, .principle-number, .stat-label, .kbd, .cmd-trigger, .ticker, .footer-colophon,
 .now-meta, .blog-meta, .cv-meta { font-family: var(--font-mono); }
 
-/* --------------------------------------------------------------------------
-   4. Icons
-   -------------------------------------------------------------------------- */
 .icon-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 .icon {
@@ -303,9 +253,6 @@ button,
   transition: transform .35s var(--ease-out), color .3s var(--ease), filter .35s var(--ease);
 }
 
-/* --------------------------------------------------------------------------
-   5. Chrome — skip link, grid field, scroll progress
-   -------------------------------------------------------------------------- */
 .skip-link {
   position: fixed;
   left: 18px;
@@ -321,6 +268,7 @@ button,
   font-weight: 700;
   transition: transform .2s ease;
 }
+
 .skip-link:focus { transform: translateY(0); }
 
 .page-noise, .ambient { display: none; }
@@ -338,6 +286,7 @@ button,
   -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 42%, transparent 84%);
   mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .55) 42%, transparent 84%);
 }
+
 body.dark .grid-field { opacity: .038; }
 
 main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
@@ -361,9 +310,6 @@ main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
   animation: gradient-pan 6s linear infinite;
 }
 
-/* --------------------------------------------------------------------------
-   6. Keyframes
-   -------------------------------------------------------------------------- */
 @keyframes gradient-pan {
   0%   { background-position: 0% 50%; }
   100% { background-position: 300% 50%; }
@@ -383,17 +329,26 @@ main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
 
 @keyframes ring-spin { to { transform: rotate(360deg); } }
 
-/* Live core: the dot itself breathes */
 @keyframes live-core {
-  0%, 100% { transform: scale(1);    opacity: 1; }
-  50%      { transform: scale(.78);  opacity: .78; }
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(.72); opacity: .7; }
 }
 
-/* Live ring: a soft pulse escaping the dot */
-@keyframes live-ring {
-  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse, var(--success)) 62%, transparent); }
-  70%  { box-shadow: 0 0 0 8px color-mix(in srgb, var(--pulse, var(--success)) 0%, transparent); }
+@keyframes live-ring-a {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse, var(--success)) 75%, transparent); }
+  80%  { box-shadow: 0 0 0 9px color-mix(in srgb, var(--pulse, var(--success)) 0%, transparent); }
   100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse, var(--success)) 0%, transparent); }
+}
+
+@keyframes live-ring-b {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse, var(--success)) 55%, transparent); }
+  80%  { box-shadow: 0 0 0 16px color-mix(in srgb, var(--pulse, var(--success)) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--pulse, var(--success)) 0%, transparent); }
+}
+
+@keyframes live-halo {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.08); }
 }
 
 @keyframes aura-pulse {
@@ -433,22 +388,29 @@ main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
   from { transform: translate(-50%, -50%) rotate(-28deg); }
   to   { transform: translate(-50%, -50%) rotate(332deg); }
 }
+
 @keyframes orbit-b {
   from { transform: translate(-50%, -50%) rotate(28deg); }
   to   { transform: translate(-50%, -50%) rotate(-332deg); }
 }
+
 @keyframes core-float {
   0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
   50%      { transform: translate(-50%, calc(-50% - 7px)) rotate(8deg); }
 }
+
 @keyframes node-breathe {
   0%, 100% { transform: scale(.96); opacity: .78; }
   50%      { transform: scale(1.12); opacity: 1; }
 }
 
-/* --------------------------------------------------------------------------
-   7. Header / Navigation
-   -------------------------------------------------------------------------- */
+@keyframes scan-line {
+  0%   { transform: translateX(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(200%); opacity: 0; }
+}
+
 .site-header {
   position: fixed;
   inset: 0 0 auto;
@@ -456,6 +418,7 @@ main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
   padding: 16px 18px 0;
   transition: padding .3s var(--ease);
 }
+
 .site-header.is-scrolled { padding-top: 9px; }
 
 .nav-wrap {
@@ -476,6 +439,7 @@ main, .site-header, .footer, .site-footer { position: relative; z-index: 2; }
   filter: blur(28px) saturate(155%);
   pointer-events: none;
 }
+
 body.dark .nav-wrap::before { opacity: .42; }
 .site-header.is-scrolled .nav-wrap::before { opacity: .38; }
 body.dark .site-header.is-scrolled .nav-wrap::before { opacity: .56; }
@@ -541,7 +505,6 @@ body.dark .site-header.is-scrolled .nav-wrap::before { opacity: .56; }
   animation: shimmer-line 8s linear infinite;
 }
 
-/* Brand */
 .brand {
   display: inline-flex;
   align-items: center;
@@ -573,21 +536,39 @@ body.dark .site-header.is-scrolled .nav-wrap::before { opacity: .56; }
   gap: 9px;
   min-width: 0;
   line-height: 1.05;
+  position: relative;
 }
 
-/* Live signal dot on the logo */
 .brand-copy::before {
   content: "";
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: conic-gradient(from 0deg,
-    var(--accent), var(--accent-2), var(--accent-3), var(--accent-4), var(--accent));
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff 0%, transparent 42%),
+    conic-gradient(from 0deg,
+      var(--accent), var(--accent-2), var(--accent-3), var(--accent-4), var(--accent));
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent),
-    0 0 18px color-mix(in srgb, var(--accent) 70%, transparent);
+    0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent),
+    0 0 18px color-mix(in srgb, var(--accent) 78%, transparent),
+    inset 0 0 6px rgba(255, 255, 255, .5);
   flex: 0 0 auto;
-  animation: live-core 2.6s ease-in-out infinite, ring-spin 9s linear infinite;
+  animation: live-core 2.4s ease-in-out infinite, live-ring-a 2.6s ease-out infinite;
+  --pulse: var(--accent);
+}
+
+.brand-copy::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  animation: live-ring-b 3.2s ease-out infinite;
+  --pulse: var(--accent-2);
 }
 
 .brand-copy strong {
@@ -626,7 +607,6 @@ body.dark .brand-copy strong {
 
 .brand-copy span { display: none; }
 
-/* Nav links */
 .nav-links {
   display: inline-flex;
   align-items: center;
@@ -693,6 +673,7 @@ body.dark .brand-copy strong {
     inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent),
     0 4px 16px -8px color-mix(in srgb, var(--accent) 55%, transparent);
 }
+
 .nav-links a.active::before { opacity: 0; }
 .nav-links a.active::after  { width: 22px; }
 
@@ -702,7 +683,6 @@ body.dark .nav-links a.active {
     0 4px 20px -8px color-mix(in srgb, var(--accent) 70%, transparent);
 }
 
-/* Actions */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -783,7 +763,6 @@ body.dark .nav-links a.active {
 body:not(.dark) .icon-moon,
 body.dark .icon-sun { display: none; }
 
-/* Primary nav CTA */
 .nav-cta {
   position: relative;
   overflow: hidden;
@@ -829,33 +808,32 @@ body.dark .icon-sun { display: none; }
     inset 0 0 0 1px rgba(255, 255, 255, .16),
     inset 0 1px 0 rgba(255, 255, 255, .28);
 }
+
 .nav-cta:hover::after { transform: translateX(130%); }
 
-/* Live availability pip inside the CTA */
 .nav-cta::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: #86efac;
-  box-shadow: 0 0 0 3px rgba(134, 239, 172, .22);
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, #86efac 60%);
+  box-shadow:
+    0 0 0 3px rgba(134, 239, 172, .28),
+    0 0 12px rgba(134, 239, 172, .8);
   position: relative;
   z-index: 1;
-  animation: live-core 2.2s ease-in-out infinite, live-ring 2.4s ease-out infinite;
+  animation: live-core 2.2s ease-in-out infinite, live-ring-a 2.4s ease-out infinite;
   --pulse: #86efac;
 }
 
 .nav-cta span.label { position: relative; z-index: 1; }
 
-/* Mobile menu button */
 .menu-button { display: none; }
 .menu-close { display: none; }
 .menu-button.open .menu-open { display: none; }
 .menu-button.open .menu-close { display: block; }
 
-/* --------------------------------------------------------------------------
-   8. Layout primitives
-   -------------------------------------------------------------------------- */
 .section-shell { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
 .prose-shell   { width: min(var(--max-prose), calc(100% - 40px)); margin-inline: auto; }
 
@@ -864,6 +842,7 @@ body.dark .icon-sun { display: none; }
   padding: var(--sp-7) 0;
   scroll-margin-top: 86px;
 }
+
 .section--compact  { padding: var(--sp-6) 0; }
 .section--spacious { padding: var(--sp-8) 0; }
 
@@ -961,9 +940,6 @@ body.dark .icon-sun { display: none; }
 
 .section-heading > * { position: relative; z-index: 1; }
 
-/* --------------------------------------------------------------------------
-   9. Surface card
-   -------------------------------------------------------------------------- */
 .surface {
   position: relative;
   border: 1px solid var(--border);
@@ -999,7 +975,6 @@ body.dark .icon-sun { display: none; }
   animation: shimmer-line 9s linear infinite;
 }
 
-/* Gradient border reveal on hover */
 .surface::after {
   content: "";
   position: absolute;
@@ -1029,6 +1004,7 @@ body.dark .icon-sun { display: none; }
   border-color: transparent;
   box-shadow: var(--shadow-2), 0 28px 56px -30px color-mix(in srgb, var(--accent) 42%, transparent);
 }
+
 .surface:hover::after { opacity: 1; }
 
 body.dark .surface {
@@ -1046,9 +1022,6 @@ body.dark .surface:hover {
 .card--cozy  { padding: var(--sp-4); }
 .card--roomy { padding: var(--sp-5); }
 
-/* --------------------------------------------------------------------------
-   10. Hero
-   -------------------------------------------------------------------------- */
 .hero {
   position: relative;
   min-height: min(88svh, 820px);
@@ -1088,7 +1061,6 @@ body.dark .surface:hover {
 
 .hero-copy { max-width: 780px; position: relative; }
 
-/* Eyebrow pill */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -1117,23 +1089,28 @@ body.dark .eyebrow {
 
 .eyebrow::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
-  animation: live-core 2s ease-in-out infinite, live-ring 2.2s ease-out infinite;
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, var(--accent) 65%);
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent),
+    0 0 12px color-mix(in srgb, var(--accent) 70%, transparent);
+  animation: live-core 2s ease-in-out infinite, live-ring-a 2.2s ease-out infinite;
   --pulse: var(--accent);
 }
 
-/* Standalone status dot */
 .status-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 0 3px var(--success-soft);
-  animation: live-core 2.4s ease-in-out infinite, live-ring 2.6s ease-out infinite;
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, var(--success) 65%);
+  box-shadow:
+    0 0 0 3px var(--success-soft),
+    0 0 12px color-mix(in srgb, var(--success) 55%, transparent);
+  animation: live-core 2.4s ease-in-out infinite, live-ring-a 2.6s ease-out infinite;
   --pulse: var(--success);
 }
 
@@ -1199,7 +1176,6 @@ body.dark .hero h1 {
 .hero h1 .char { display: inline; opacity: 1; transform: none; filter: none; animation: none; }
 .hero h1 .period .char { color: inherit; background: none; -webkit-text-fill-color: currentColor; }
 
-/* Blinking type cursor after the headline */
 .hero h1 .type-cursor {
   display: inline-block;
   width: .07em;
@@ -1225,7 +1201,6 @@ body.dark .hero h1 {
   letter-spacing: -.01em;
 }
 
-/* Ticker strip */
 .ticker {
   position: relative;
   margin-top: 18px;
@@ -1260,9 +1235,21 @@ body.dark .hero h1 {
   animation: icon-float 2.4s ease-in-out infinite;
 }
 
+.ticker::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 22%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .35), transparent);
+  transform: translateX(-120%) skewX(-18deg);
+  pointer-events: none;
+  animation: scan-line 5s ease-in-out infinite;
+}
+
 .ticker strong { color: var(--text); font-weight: 650; }
 
-/* Buttons */
 .hero-cta {
   display: flex;
   flex-wrap: wrap;
@@ -1326,6 +1313,7 @@ body.dark .hero h1 {
     0 18px 36px -15px var(--accent-glow),
     inset 0 1px 0 rgba(255, 255, 255, .26);
 }
+
 .button-primary:hover::after { transform: translateX(130%); }
 .button-primary > * { position: relative; z-index: 1; }
 
@@ -1344,7 +1332,6 @@ body.dark .hero h1 {
 
 .button-wide { width: 100%; }
 
-/* Hero meta */
 .hero-meta {
   margin-top: 18px;
   display: flex;
@@ -1382,9 +1369,6 @@ body.dark .hero h1 {
   background: var(--muted-2);
 }
 
-/* --------------------------------------------------------------------------
-   11. Profile panel
-   -------------------------------------------------------------------------- */
 .profile-panel {
   position: relative;
   padding: var(--sp-4);
@@ -1451,7 +1435,6 @@ body.dark .hero h1 {
   text-transform: uppercase;
 }
 
-/* Live status chip */
 .panel-live {
   display: inline-flex;
   align-items: center;
@@ -1462,16 +1445,18 @@ body.dark .hero h1 {
 }
 
 .panel-live span {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--success);
-  box-shadow: 0 0 0 3px var(--success-soft);
-  animation: live-core 2.2s ease-in-out infinite, live-ring 2.4s ease-out infinite;
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, var(--success) 65%);
+  box-shadow:
+    0 0 0 3px var(--success-soft),
+    0 0 12px color-mix(in srgb, var(--success) 55%, transparent);
+  animation: live-core 2.2s ease-in-out infinite, live-ring-a 2.4s ease-out infinite;
   --pulse: var(--success);
 }
 
-/* Avatar */
 .avatar-block {
   display: flex;
   align-items: center;
@@ -1527,7 +1512,6 @@ body.dark .hero h1 {
   letter-spacing: -.016em;
 }
 
-/* Blinking caret beside the name */
 .avatar-name::after {
   content: "";
   display: inline-block;
@@ -1610,9 +1594,6 @@ body.dark .hero h1 {
   filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 75%, transparent));
 }
 
-/* --------------------------------------------------------------------------
-   12. Icon tiles
-   -------------------------------------------------------------------------- */
 .section-icon, .skill-icon, .research-icon {
   position: relative;
   width: 44px;
@@ -1664,7 +1645,6 @@ body.dark .research-icon {
 .skill-icon:hover::before,
 .research-icon:hover::before { opacity: .85; }
 
-/* Tiny live spark in the tile corner */
 .section-icon::after,
 .skill-icon::after,
 .research-icon::after {
@@ -1672,14 +1652,16 @@ body.dark .research-icon {
   position: absolute;
   right: 6px;
   top: 6px;
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background: var(--accent-2);
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, var(--accent-2) 70%);
   box-shadow:
-    0 0 0 3px color-mix(in srgb, var(--accent-2) 10%, transparent),
-    0 0 10px color-mix(in srgb, var(--accent-2) 48%, transparent);
-  animation: live-core 2.8s ease-in-out infinite;
+    0 0 0 3px color-mix(in srgb, var(--accent-2) 12%, transparent),
+    0 0 10px color-mix(in srgb, var(--accent-2) 60%, transparent);
+  animation: live-core 2.8s ease-in-out infinite, live-ring-a 3s ease-out infinite;
+  --pulse: var(--accent-2);
 }
 
 .section-icon { margin-bottom: var(--sp-3); }
@@ -1707,9 +1689,6 @@ body.dark .research-icon {
   filter: drop-shadow(0 0 8px color-mix(in srgb, var(--accent) 80%, transparent));
 }
 
-/* --------------------------------------------------------------------------
-   13. About
-   -------------------------------------------------------------------------- */
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
@@ -1774,9 +1753,6 @@ body.dark .research-icon {
   line-height: 1.7;
 }
 
-/* --------------------------------------------------------------------------
-   14. Education
-   -------------------------------------------------------------------------- */
 .education-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
@@ -1917,9 +1893,6 @@ body.dark .academic-stat strong {
   line-height: 1.75;
 }
 
-/* --------------------------------------------------------------------------
-   15. Research
-   -------------------------------------------------------------------------- */
 .research-grid {
   display: grid;
   grid-template-columns: 1.25fr .875fr .875fr;
@@ -1957,7 +1930,6 @@ body.dark .academic-stat strong {
   line-height: 1.8;
 }
 
-/* Tags */
 .tag-row, .tag-list, .project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag-row { margin-top: auto; padding-top: var(--sp-3); }
 
@@ -2044,9 +2016,6 @@ body.dark .academic-stat strong {
   box-shadow: inset 0 1px 0 color-mix(in srgb, white 60%, transparent);
 }
 
-/* --------------------------------------------------------------------------
-   16. Skills
-   -------------------------------------------------------------------------- */
 .skills-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2076,9 +2045,6 @@ body.dark .academic-stat strong {
   font-weight: 500;
 }
 
-/* --------------------------------------------------------------------------
-   17. Projects
-   -------------------------------------------------------------------------- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2266,9 +2232,6 @@ body.dark .academic-stat strong {
   filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 80%, transparent));
 }
 
-/* --------------------------------------------------------------------------
-   18. Experience
-   -------------------------------------------------------------------------- */
 .experience-list { display: grid; gap: var(--sp-2); }
 
 .experience-item {
@@ -2337,9 +2300,6 @@ body.dark .academic-stat strong {
   filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 75%, transparent));
 }
 
-/* --------------------------------------------------------------------------
-   19. Publications
-   -------------------------------------------------------------------------- */
 .publication-list { overflow: hidden; }
 
 .publication-row {
@@ -2413,9 +2373,6 @@ body.dark .academic-stat strong {
   filter: drop-shadow(0 0 6px color-mix(in srgb, var(--accent) 75%, transparent));
 }
 
-/* --------------------------------------------------------------------------
-   20. Contact
-   -------------------------------------------------------------------------- */
 .contact-section { padding-bottom: var(--sp-6); }
 
 .contact-card {
@@ -2591,9 +2548,6 @@ body.dark .academic-stat strong {
   font-weight: 700;
 }
 
-/* --------------------------------------------------------------------------
-   21. Footer
-   -------------------------------------------------------------------------- */
 .footer {
   padding: var(--sp-6) 0 var(--sp-4);
   border-top: 1px solid var(--border);
@@ -2694,9 +2648,6 @@ body.dark .academic-stat strong {
 
 .footer-bottom a:hover { color: var(--accent); }
 
-/* --------------------------------------------------------------------------
-   22. Mobile nav
-   -------------------------------------------------------------------------- */
 .mobile-nav {
   position: fixed;
   inset: 0;
@@ -2787,9 +2738,6 @@ body.dark .academic-stat strong {
   font-size: 12px;
 }
 
-/* --------------------------------------------------------------------------
-   23. Reveal on scroll
-   -------------------------------------------------------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(22px);
@@ -2801,9 +2749,6 @@ body.dark .academic-stat strong {
 .reveal-delay-2 { transition-delay: 130ms; }
 .reveal-delay-3 { transition-delay: 190ms; }
 
-/* --------------------------------------------------------------------------
-   24. Command palette
-   -------------------------------------------------------------------------- */
 .cmd-overlay {
   position: fixed;
   inset: 0;
@@ -2939,9 +2884,6 @@ body.dark .academic-stat strong {
   color: var(--muted);
 }
 
-/* --------------------------------------------------------------------------
-   25. Sub-pages — page, case study, prose, CV, blog, now
-   -------------------------------------------------------------------------- */
 .page {
   padding-top: calc(var(--header-h) + var(--sp-5));
   padding-bottom: var(--sp-7);
@@ -3128,7 +3070,6 @@ body.dark .academic-stat strong {
 
 .prose a:hover { text-decoration-thickness: 2px; }
 
-/* CV */
 .cv-header {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -3209,7 +3150,6 @@ body.dark .academic-stat strong {
   line-height: 1.75;
 }
 
-/* Blog */
 .blog-list {
   display: grid;
   gap: var(--sp-3);
@@ -3255,7 +3195,6 @@ body.dark .academic-stat strong {
 
 .blog-card:hover h3 { color: var(--accent); }
 
-/* Now */
 .now-list {
   display: grid;
   gap: var(--sp-4);
@@ -3286,12 +3225,15 @@ body.dark .academic-stat strong {
 
 .now-meta::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-soft);
-  animation: live-core 2.4s ease-in-out infinite, live-ring 2.6s ease-out infinite;
+  background:
+    radial-gradient(circle at 30% 30%, #ffffff, var(--accent) 70%);
+  box-shadow:
+    0 0 0 3px var(--accent-soft),
+    0 0 12px color-mix(in srgb, var(--accent) 55%, transparent);
+  animation: live-core 2.4s ease-in-out infinite, live-ring-a 2.6s ease-out infinite;
   --pulse: var(--accent);
 }
 
@@ -3309,9 +3251,6 @@ body.dark .academic-stat strong {
   line-height: 1.75;
 }
 
-/* --------------------------------------------------------------------------
-   26. Utilities
-   -------------------------------------------------------------------------- */
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0 !important; }
 .mt-3 { margin-top: var(--sp-3); }
@@ -3320,9 +3259,6 @@ body.dark .academic-stat strong {
 .mb-0 { margin-bottom: 0 !important; }
 .stack > * + * { margin-top: var(--sp-3); }
 
-/* --------------------------------------------------------------------------
-   27. Fallbacks
-   -------------------------------------------------------------------------- */
 @supports not (color: color-mix(in srgb, white, black)) {
   body { background: var(--bg); }
   .navbar { background: var(--nav-bg); }
@@ -3331,9 +3267,6 @@ body.dark .academic-stat strong {
   .section--banded { background: var(--bg-tint); }
 }
 
-/* --------------------------------------------------------------------------
-   28. Responsive
-   -------------------------------------------------------------------------- */
 @media (min-width: 901px) {
   .hero-copy { padding-top: 2vh; }
   .profile-panel { max-width: 430px; justify-self: end; }
@@ -3415,7 +3348,8 @@ body.dark .academic-stat strong {
   }
 
   .brand-copy strong { font-size: 13px; }
-  .brand-copy::before { width: 7px; height: 7px; }
+  .brand-copy::before,
+  .brand-copy::after { width: 8px; height: 8px; }
 
   .icon-button { width: 36px; height: 36px; }
   .nav-cta { width: 36px; height: 36px; border-radius: 10px; }
@@ -3519,9 +3453,6 @@ body.dark .academic-stat strong {
   .button { min-height: 48px; }
 }
 
-/* --------------------------------------------------------------------------
-   29. Hover-capable refinements
-   -------------------------------------------------------------------------- */
 @media (hover: hover) and (pointer: fine) {
   .surface:hover .section-icon::before,
   .surface:hover .skill-icon::before,
@@ -3532,9 +3463,6 @@ body.dark .academic-stat strong {
   .project:hover .visual-grid { opacity: .32; }
 }
 
-/* --------------------------------------------------------------------------
-   30. Touch / reduced motion
-   -------------------------------------------------------------------------- */
 @media (hover: none) {
   .surface:hover { transform: none; box-shadow: var(--shadow-1); }
   .surface:hover::after { opacity: 0; }
@@ -3586,6 +3514,7 @@ body.dark .academic-stat strong {
   .nav-wrap::before { display: none !important; }
 
   .brand-copy::before,
+  .brand-copy::after,
   .eyebrow::before,
   .status-dot,
   .panel-live span,
@@ -3607,12 +3536,10 @@ body.dark .academic-stat strong {
   .profile-panel::before,
   .profile-panel::after,
   .contact-card::after,
-  .scroll-progress { animation: none !important; }
+  .scroll-progress,
+  .ticker::after { animation: none !important; }
 }
 
-/* --------------------------------------------------------------------------
-   31. Print
-   -------------------------------------------------------------------------- */
 @media print {
   .site-header,
   .ambient,
